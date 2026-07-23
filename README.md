@@ -12,6 +12,7 @@
 |------|------------|
 | [`docs/Заказы.md`](docs/Заказы.md) | HTTP API StockAPI: заказы (`/orders`), отгрузка, статусы, возвраты |
 | [`docs/webhook_test_server.txt`](docs/webhook_test_server.txt) | Заметки по тестовому серверу WebHook |
+| [`docs/Статусы1СИнвойсовПродажи.md`](docs/Статусы1СИнвойсовПродажи.md) | Когда и где выставляется `Состояние` в РС `СостоянияИнвойсовПродажи` |
 
 - Правила разработки для Cursor: [.cursor/rules/](.cursor/rules/)
 
