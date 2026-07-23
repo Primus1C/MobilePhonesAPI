@@ -272,6 +272,12 @@
 					<ContextMenu name="СкладыСкладКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="40"/>
 				</InputField>
+				<LabelField name="СкладыСкладКод" id="90">
+					<DataPath>Объект.Склады.Склад.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладыСкладКодКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СкладыСкладКодРасширеннаяПодсказка" id="92"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -282,6 +288,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.Склады"/>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>

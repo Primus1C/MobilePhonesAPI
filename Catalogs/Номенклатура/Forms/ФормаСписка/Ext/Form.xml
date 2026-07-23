@@ -675,18 +675,60 @@
 					<dcssch:field>Заказ</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>КоличествоОстаток</dcssch:dataPath>
-					<dcssch:field>КоличествоОстаток</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Резерв</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>SKU</dcssch:dataPath>
 					<dcssch:field>SKU</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидНоменклатуры</dcssch:dataPath>
+					<dcssch:field>ВидНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОсновнойПоставщик</dcssch:dataPath>
+					<dcssch:field>ОсновнойПоставщик</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяГруппыДляКонструктора</dcssch:dataPath>
+					<dcssch:field>ИмяГруппыДляКонструктора</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статья</dcssch:dataPath>
+					<dcssch:field>Статья</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаПодбора</dcssch:dataPath>
+					<dcssch:field>ГруппаПодбора</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипНоменклатуры</dcssch:dataPath>
+					<dcssch:field>ТипНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеТелеграм</dcssch:dataPath>
+					<dcssch:field>НаименованиеТелеграм</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемСоздан</dcssch:dataPath>
+					<dcssch:field>КемСоздан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сохранен</dcssch:dataPath>
+					<dcssch:field>Сохранен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Создан</dcssch:dataPath>
+					<dcssch:field>Создан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемСохранен</dcssch:dataPath>
+					<dcssch:field>КемСохранен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>
@@ -753,7 +795,7 @@
 					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
 					<dcssch:useRestriction>false</dcssch:useRestriction>
 				</Parameter>
-				<MainTable>AccumulationRegister.РезервыТовара.Balance</MainTable>
+				<MainTable>Catalog.Номенклатура</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemGroup">

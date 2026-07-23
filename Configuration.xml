@@ -32,7 +32,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>ИТДБ_Торговля_8_3</Name>
+			<Name>Торговля_серийными_товарами_8_3</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -519,12 +519,12 @@
 			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonModule>РаботаСИнвойсами</CommonModule>
 			<CommonModule>Комиссия</CommonModule>
-			<CommonModule>StockAPI_Утилиты</CommonModule>
-			<CommonModule>StockAPI_Справочники</CommonModule>
-			<CommonModule>StockAPI_Цены</CommonModule>
+			<CommonModule>StockAPI_Заказы</CommonModule>
 			<CommonModule>StockAPI_Контрагенты</CommonModule>
 			<CommonModule>StockAPI_Остатки</CommonModule>
-			<CommonModule>StockAPI_Заказы</CommonModule>
+			<CommonModule>StockAPI_Справочники</CommonModule>
+			<CommonModule>StockAPI_Утилиты</CommonModule>
+			<CommonModule>StockAPI_Цены</CommonModule>
 			<CommonAttribute>КемСоздан</CommonAttribute>
 			<CommonAttribute>Создан</CommonAttribute>
 			<CommonAttribute>КемСохранен</CommonAttribute>

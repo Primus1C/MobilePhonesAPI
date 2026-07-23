@@ -4,7 +4,7 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.ИТДБ_Торговля_8_3</name>
+		<name>Configuration.Торговля_серийными_товарами_8_3</name>
 		<right>
 			<name>ExclusiveMode</name>
 			<value>true</value>
