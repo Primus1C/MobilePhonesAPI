@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta charset="UTF-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=edge"></meta><style>
+            body {
+                font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+                background-color: #000; /* Темный фон из вашего примера */
+                margin: 0;
+                padding: 4px;
+                overflow-x: auto;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center; /* Центрирование */
+            }
+            .dashboard-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                min-width: 1000px;
+            }
+
+            .gauge-card {
+                background: #262626; /* Темно-серый фон для самих карточек */
+                padding: 4px 4px;
+                margin: 0 5px;
+                border-radius: 20px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer; /* Курсор в виде руки */
+            	transition: transform 0.2s, box-shadow 0.2s; /* Плавная анимация */
+            }
+            .gauge-card:hover {
+            	transform: translateY(-5px); /* Приподнимаем карточку при наведении */
+            	box-shadow: 0 12px 30px rgba(255, 0, 94, 0.2); /* Легкое неоновое свечение фона */
+        	} 
+        	
+            .svg-container {
+                width: 100%;
+                max-width: 240px;
+            }
+            svg {
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+            .rings-group {
+                transform: rotate(-90deg);
+                transform-origin: 150px 150px;
+            }
+
+            /* Добавлена прозрачность 20% к фону колец, чтобы они не были слишком яркими на черном фоне */
+            .track-bg {
+                fill: none;
+                stroke-width: 12;
+                stroke-linecap: round;
+                opacity: 0.2;
+            }
+            .track-data {
+                fill: none;
+                stroke-width: 12;
+                stroke-linecap: round;
+                transition: stroke-dasharray 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+
+            .ring-label {
+                font-size: 11px;
+                font-weight: 600;
+            }
+            .ring-val {
+                font-size: 11px;
+                font-weight: normal;
+                opacity: 0.8;
+            }
+            .center-value {
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .center-text {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            /* ВАШИ СТИЛИ СВЕЧЕНИЯ */
+            .neon-text {
+                /* font-size: 4rem; - убрано, чтобы текст поместился в кольца (используется 28px из .center-value) */
+                text-shadow:
+                    0 0 5px #ff005e,
+                    0 0 10px #ff005e,
+                    0 0 20px #ff005e,
+                    0 0 40px #ff005e,
+                    0 0 80px #ff005e;
+                animation: glow 1.5s infinite alternate;
+            }
+
+            @keyframes glow {
+                0% {
+                    text-shadow:
+                        0 0 5px #ff005e,
+                        0 0 10px #ff005e,
+                        0 0 20px #ff005e,
+                        0 0 40px #ff005e,
+                        0 0 80px #ff005e;
+                }
+                100% {
+                    text-shadow:
+                        0 0 10px #00d4ff,
+                        0 0 20px #00d4ff,
+                        0 0 40px #00d4ff,
+                        0 0 80px #00d4ff,
+                        0 0 160px #00d4ff;
+                }
+            }
+        </style></head><body>
+        
+<div class="dashboard-container">
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-1"></div>
+            </div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-2"></div>
+            </div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-3"></div>
+            </div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-4"></div>
+            </div>
+            
+<div class="gauge-card">
+                
+<div class="svg-container" id="gauge-5"></div>
+            </div>
+        </div>
+
+        
+<script>
+            var size = 300,
+                center = 150,
+                baseRadius = 125,
+                trackWidth = 12,
+                trackGap = 6,
+                maxScale = 100;
+            var ringColors = [
+                { color: "#30638E", bgColor: "#D0E0EE" },
+                { color: "#EDAE49", bgColor: "#FFF1D1" },
+                { color: "#00798C", bgColor: "#C3EAF0" },
+                { color: "#D1495B", bgColor: "#FED2D8" },
+                { color: "#003D5B", bgColor: "#C6DAE3" },
+            ];
+
+            function UpdateIndicator(
+                indIndex,
+                n1,
+                v1,
+                d1,
+                n2,
+                v2,
+                d2,
+                n3,
+                v3,
+                d3,
+                n4,
+                v4,
+                d4,
+                n5,
+                v5,
+                d5,
+                tName,
+                tVal,
+                tNameColor,
+                tValColor,
+            ) {
+                var items = [];
+
+                function addItem(n, v, d, idx) {
+                    if (n !== undefined && n !== null && n !== "") {
+                        var num = Number(v);
+                        if (isNaN(num)) num = 0;
+                        items.push({
+                            name: n,
+                            val: num,
+                            display: d || "",
+                            color: ringColors[idx].color,
+                            bgColor: ringColors[idx].bgColor,
+                        });
+                    }
+                }
+
+                addItem(n1, v1, d1, 0);
+                addItem(n2, v2, d2, 1);
+                addItem(n3, v3, d3, 2);
+                addItem(n4, v4, d4, 3);
+                addItem(n5, v5, d5, 4);
+                
+                   var cNameColor = tNameColor || '#a0aec0', cValColor = tValColor || '#2d3748', cName = tName || '', cVal = tVal || '';
+        
+        // --- НОВАЯ ЛОГИКА ---
+        // Проверяем, что написано в центре. Если это "Ок", "OK" или "Ok", убираем класс свечения.
+        var neonClass = (cVal === 'Ок' || cVal === 'OK' || cVal === 'Ok') ? '' : ' neon-text';
+        // --------------------
+
+        var svgHTML = '<svg viewBox="0 0 ' + size + ' ' + size + '"><g class="rings-group">';
+        var labelsHTML = '<g class="labels-group">';
+
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i], r = baseRadius - (i * (trackWidth + trackGap)), circ = 2 * Math.PI * r;
+            var trackLength = circ * 0.75, gapLength = circ * 0.25;
+            var targetDash = (Math.min(item.val, maxScale) / maxScale) * trackLength;
+
+            svgHTML += '<circle class="track-bg" cx="' + center + '" cy="' + center + '" r="' + r + '" stroke="' + item.bgColor + '" stroke-dasharray="' + trackLength + ' ' + gapLength + '" />';
+            svgHTML += '<circle class="track-data" cx="' + center + '" cy="' + center + '" r="' + r + '" stroke="' + item.color + '" stroke-dasharray="0 ' + circ + '" data-target="' + targetDash + '" data-circ="' + circ + '" />';
+            
+            labelsHTML += '<text x="' + (center - 10) + '" y="' + (center - r + 4) + '" text-anchor="end" class="ring-label" fill="' + item.color + '">' + item.name + ' <tspan class="ring-val">' + item.display + '</tspan></text>';
+        }
+
+        svgHTML += '</g>' + labelsHTML + '</g>';
+        
+        // Подставляем переменную neonClass в тег (класс либо будет содержать анимацию, либо будет пустой строкой)
+        svgHTML += '<text x="' + center + '" y="' + (center + 5) + '" text-anchor="middle" class="center-value' + neonClass + '" fill="' + cValColor + '">' + cVal + '</text>';
+        
+        svgHTML += '<text x="' + center + '" y="' + (center + 25) + '" text-anchor="middle" class="center-text" fill="' + cNameColor + '">' + cName + '</text></svg>';
+
+        var container = document.getElementById('gauge-' + indIndex);
+        if(container) {
+            
+            // ОБОРАЧИВАЕМ ГРАФИК В ССЫЛКУ С ПЕРЕДАЧЕЙ НОМЕРА ИНДИКАТОРА
+            var linkStart = '<a href="action://indicator_click?index=' + indIndex + '" style="text-decoration: none; outline: none; display: block;">';
+            var linkEnd = '</a>';
+            
+            container.innerHTML = linkStart + svgHTML + linkEnd;
+            
+            container.getBoundingClientRect(); 
+            var tracks = container.querySelectorAll('.track-data');
+            setTimeout(function() {
+                for (var j = 0; j < tracks.length; j++) {
+                    tracks[j].setAttribute('stroke-dasharray', tracks[j].getAttribute('data-target') + ' ' + tracks[j].getAttribute('data-circ'));
+                }
+            }, 50);
+        }
+    }
+    
+    window.onload = function() {
+        // %ВСТАВКА_ВЫЗОВОВ_ИЗ_1С%
+    };
+</script></body></html>

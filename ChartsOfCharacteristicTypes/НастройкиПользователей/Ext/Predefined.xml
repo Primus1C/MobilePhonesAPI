@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.18">
+	<Item id="e12b8e05-3878-48ff-bd67-650ace721065">
+		<Name>ИнтерфейсДокументов</Name>
+		<Code>00002</Code>
+		<Description>Интерфейс документов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="6d80e596-f62c-4ee1-a4ca-302559ac8b1c">
+				<Name>БыстрыйВыборВалют</Name>
+				<Code>00011</Code>
+				<Description>Быстрый выбор валют (выпадающий список)</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6d396965-818f-4905-a2f4-a8afa619ac18">
+				<Name>ОтображатьВесВИнвойсе</Name>
+				<Code>00020</Code>
+				<Description>Отображать колонку "вес" в инвойсе</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="dbaa9bd6-8b30-4fe6-a0a7-4a5bcad6d230">
+				<Name>ОтображатьПримечаниеТекущегоДокументаВнизуСписка</Name>
+				<Code>00015</Code>
+				<Description>Отображать примечание текущего документа внизу списка</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c80a55f9-76c2-4103-82e7-e5a3045ce854">
+				<Name>ОтображатьСостояниеВФормеДокумента</Name>
+				<Code>00003</Code>
+				<Description>Отображать состояние в форме документа</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ccaee96c-4882-44ee-a8bf-06ea2ba444f4">
+				<Name>ПредставлениеДатыДокументов</Name>
+				<Code>00025</Code>
+				<Description>Представление даты документов</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПредставлениеДаты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="bab4aef7-074c-4420-9717-47a191623051">
+				<Name>ПредставлениеИнвойсов</Name>
+				<Code>00009</Code>
+				<Description>Представление инвойсов</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ПредставленияИнвойса</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="21431cb2-d27e-4e9a-bf1a-25fb72bad75d">
+				<Name>РаскрашиватьВалюты</Name>
+				<Code>00004</Code>
+				<Description>Раскрашивать валюты</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="978ecee5-dc2c-4fdd-847f-43fe8b6d4f37">
+				<Name>РаскрашиватьСтатусыВФормеДокумента</Name>
+				<Code>00005</Code>
+				<Description>Раскрашивать статусы в форме документа</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4a617c6c-c8a2-4741-86ce-971575486694">
+				<Name>РаскрашиватьСтатусыВФормеСписка</Name>
+				<Code>00006</Code>
+				<Description>Раскрашивать статусы в форме списка</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="06f0fd82-f30a-4a20-a54a-c6602ba44f7d">
+		<Name>Номенклатура</Name>
+		<Code>00021</Code>
+		<Description>Номенклатура</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="575075bd-4133-4433-b171-412cce053579">
+				<Name>ВыделятьЦветомУслуги</Name>
+				<Code>00018</Code>
+				<Description>Выделять цветом услуги</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5d8686b3-9947-4028-b673-8bd9cfeaddf8">
+				<Name>ОтображатьВес</Name>
+				<Code>00024</Code>
+				<Description>Отображать вес</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="eff86560-0f15-4f40-b2d0-0478d7d3675a">
+				<Name>ОтображатьФлагиВСписке</Name>
+				<Code>00022</Code>
+				<Description>Отображать флаги спецификации в списке номенклатуры</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ad61d92f-8def-442f-84d1-214ea4002d3c">
+				<Name>ОтображатьФлагиВДокументах</Name>
+				<Code>00023</Code>
+				<Description>Отображать флаги спецификации в табличных частях документов</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="a5ed43a6-38e3-44a7-b9f3-2ec8c5720a51">
+		<Name>ОсновныеЗначенияДляПодстановки</Name>
+		<Code>00001</Code>
+		<Description>Основные значения для подстановки в документы и справочники</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="640b7795-04a0-4a47-800a-fda7fabfd7c9">
+				<Name>Валюта</Name>
+				<Code>00014</Code>
+				<Description>Валюта</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Валюты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="763c5cc9-0725-425b-a620-6521df0a05f6">
+				<Name>ВалютаРасчетовСКомиссионером</Name>
+				<Code>00028</Code>
+				<Description>Валюта расчетов с комиссионером</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Валюты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ba448555-0385-4770-822f-92da56bf0fe9">
+				<Name>ВыборВалют</Name>
+				<Code>00019</Code>
+				<Description>Выбор валют</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ВидыВыбораВалюты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4e99f28d-6d69-44f8-ac2c-f88ec79decfd">
+				<Name>КонтрагентыПокупатели</Name>
+				<Code>00013</Code>
+				<Description>Группа контрагентов покупателей</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b3b4d54d-1266-4d16-94ff-7034ab9b58ee">
+				<Name>КонтрагентыПоставщики</Name>
+				<Code>00017</Code>
+				<Description>Группа контрагентов поставщиков</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e9331ba1-24d1-425f-bfe4-b489afcf0adc">
+				<Name>Склад</Name>
+				<Code>00010</Code>
+				<Description>Склад</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e3527bf0-31fd-4992-b6a6-5af2c98ca045">
+				<Name>СкладКомиссии</Name>
+				<Code>00027</Code>
+				<Description>Склад комиссии</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5c439507-e3dc-4a6c-9a09-d6deda5e6c45">
+				<Name>СкладОтправителя</Name>
+				<Code>00012</Code>
+				<Description>Склад отправителя</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.СкладыКонтрагентов</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="aead451f-856b-45cd-b835-cd264632bd11">
+		<Name>Сообщения</Name>
+		<Code>00007</Code>
+		<Description>Сообщения</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="e35f07de-e4fd-41b1-aa2a-ac71103edcd3">
+				<Name>СтильОформленияСообщений</Name>
+				<Code>00008</Code>
+				<Description>Стиль оформления</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СтилиОформленияСообщений</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="33dc57d2-f473-4018-b2b3-c09187138157">
+		<Name>ПодтверждениеЗакрытияПрограммы</Name>
+		<Code>00016</Code>
+		<Description>Подтверждение закрытия программы</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4e797085-6bfa-46b4-9eee-d4cfaabfec9d">
+		<Name>СтильПрограммы</Name>
+		<Code>00026</Code>
+		<Description>Стиль цветового оформления программы (только для интерфейса "Такси")</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтилиПрограммы</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

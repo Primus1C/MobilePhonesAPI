@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.18">
+	<Item id="9540cb7b-8bd9-4683-8fad-564cb99ac2f4">
+		<Name>Долги</Name>
+		<Code>00001</Code>
+		<Description>Долги</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="fabcb6d7-8687-4318-a56b-ebcdf77cdd85">
+				<Name>Долг_НеЗакрыто</Name>
+				<Code>00002</Code>
+				<Description>Не закрыто</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4ee8995b-3d9c-4e35-acde-89c149f87224">
+				<Name>Долг_НеОплачено</Name>
+				<Code>00003</Code>
+				<Description>Неоплачено</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="76ca7f9d-7450-4f76-b459-d65be921b365">
+				<Name>Долг_Полностью</Name>
+				<Code>00004</Code>
+				<Description>Полностью</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="bce8185a-ff74-4531-9ce2-7f6e900f91d5">
+				<Name>Долг_Частично</Name>
+				<Code>00005</Code>
+				<Description>Частично</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="fb85bd8b-e710-4603-ba23-313be537b5ab">
+		<Name>Номенклатура</Name>
+		<Code>00026</Code>
+		<Description>Номенклатура</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="5ed52134-e489-4872-87bc-fa82195bb4b3">
+				<Name>ЦветУслуг</Name>
+				<Code>00027</Code>
+				<Description>Цвет услуг</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="978f9a76-a94f-4d73-8008-d0160fb24372">
+		<Name>Предоплаты</Name>
+		<Code>00006</Code>
+		<Description>Предоплаты</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="465baf9c-81b1-4c6c-873f-8cd12942d581">
+				<Name>НеЗакрыто</Name>
+				<Code>00007</Code>
+				<Description>Не закрыто</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="28ebb92f-7f59-4f17-8341-73694b9711c9">
+				<Name>Неоплачено</Name>
+				<Code>00008</Code>
+				<Description>Неоплачено</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="34c5b91b-66ee-4a6d-ab9e-747d49e32160">
+				<Name>Полностью</Name>
+				<Code>00009</Code>
+				<Description>Полностью</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e1ef6f8c-c7e0-4274-b1dd-42ab9fed42d6">
+				<Name>Пусто</Name>
+				<Code>00010</Code>
+				<Description>Пусто</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="68f0b4c2-a7c3-49a6-8434-861cae18e92e">
+				<Name>Частично</Name>
+				<Code>00011</Code>
+				<Description>Частично</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="07ddaa6e-5cb4-4a40-8096-bbc96a2c65c2">
+		<Name>СтатусыИнвойсов</Name>
+		<Code>00020</Code>
+		<Description>Статусы инвойсов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="4a1b5e47-64b9-468b-9dad-0e21ba9c08dd">
+				<Name>ВПути</Name>
+				<Code>00022</Code>
+				<Description>В пути</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9ff72134-c6d8-4885-886a-04864050a9db">
+				<Name>НеОтправлен</Name>
+				<Code>00021</Code>
+				<Description>Не отправлен</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8e3420f2-f25e-42b9-927d-372532a0a545">
+				<Name>Прибыл</Name>
+				<Code>00024</Code>
+				<Description>Прибыл</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0c174625-19f9-4315-8250-a64e5a523bda">
+				<Name>ЧастичноПрибыл</Name>
+				<Code>00023</Code>
+				<Description>Частично прибыл</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="83e4df72-281b-4055-8a4e-c02b5fa64650">
+		<Name>СтатусыИнвойсовПродажи</Name>
+		<Code>00034</Code>
+		<Description>Статусы инвойсов продажи</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="78fd7962-c79f-483e-8d27-3ac58cb1f609">
+				<Name>Зарегистрирован</Name>
+				<Code>00035</Code>
+				<Description>Зарегистрирован</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e35fbd08-07c9-4519-bfb7-5897228f11c8">
+				<Name>Отгружен</Name>
+				<Code>00036</Code>
+				<Description>Отгружен</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a7783dd0-8331-4b84-aac7-d42eda2c0fa9">
+				<Name>Отменен</Name>
+				<Code>00037</Code>
+				<Description>Отменен</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="aee37808-bb0f-4284-9246-8ea8e3097b3c">
+				<Name>Собирается</Name>
+				<Code>00038</Code>
+				<Description>Собирается</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="0d4eb805-c1b8-425e-871a-a720ee787a90">
+		<Name>СтатусыИнспекцииИнвойсов</Name>
+		<Code>00012</Code>
+		<Description>Статусы инспекции инвойсов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="8364c83f-50d8-4ce3-ad89-d51de3898006">
+				<Name>HaveSomeProblem</Name>
+				<Code>00013</Code>
+				<Description>Have some problem</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4a4edfe1-cef6-462e-9729-6c3f9a51463c">
+				<Name>InspectionDone</Name>
+				<Code>00014</Code>
+				<Description>Inspection done</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="9e2e6bfc-4a2b-4f1b-ad56-d99eb40f4d59">
+				<Name>NotInspected</Name>
+				<Code>00015</Code>
+				<Description>Not inspected</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="4e6b3765-b414-41b0-bec6-15a7ac7277c4">
+		<Name>СтатусыОплатыИнвойсов</Name>
+		<Code>00016</Code>
+		<Description>Статусы оплаты инвойсов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="16f9aeee-b369-4dab-b12e-9c77379119a2">
+				<Name>NotPaid</Name>
+				<Code>00017</Code>
+				<Description>Not paid</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0edbf060-11dc-4914-ba84-5271d7566c72">
+				<Name>Paid</Name>
+				<Code>00019</Code>
+				<Description>Paid</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="cca698ce-fbd5-4cec-8f04-eeda8232101b">
+				<Name>PaidNotReceivded</Name>
+				<Code>00018</Code>
+				<Description>Paid, not receivded</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7272224d-4164-4d5b-b7bb-4cd3fc69f1cd">
+				<Name>PartlyPaid</Name>
+				<Code>00025</Code>
+				<Description>Partly paid</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="da3284b9-5254-40fc-8632-19311ff551b9">
+				<Name>WithoutPayment</Name>
+				<Code>00028</Code>
+				<Description>Without payment</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="4ab5813d-bbf5-4a26-baff-dde0c3854011">
+		<Name>СтатусыПривязкиИнвойсов</Name>
+		<Code>00029</Code>
+		<Description>Статусы привязки инвойсов</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="82f0ee3e-0a60-4800-95c6-1167024dbc28">
+				<Name>Инв_НеЗакрыто</Name>
+				<Code>00030</Code>
+				<Description>Не закрыто</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e902eb83-aa70-454d-9386-2e7a22a19fa5">
+				<Name>Инв_Неоплачено</Name>
+				<Code>00033</Code>
+				<Description>Неоплачено</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="32095386-bd03-4a4b-8a6e-a953770e6142">
+				<Name>Инв_Полностью</Name>
+				<Code>00031</Code>
+				<Description>Полностью</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="a0852090-9a31-41c5-bf99-50234da58021">
+				<Name>Инв_Частично</Name>
+				<Code>00032</Code>
+				<Description>Частично</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>14</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

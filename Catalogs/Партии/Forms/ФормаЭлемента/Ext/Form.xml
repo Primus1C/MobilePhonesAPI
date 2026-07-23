@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОбщаяКомандаОстаткиНоменклатуры" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ОстаткиНоменклатуры</CommandName>
+				<DataPath>Объект.Owner</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаОстаткиНоменклатурыРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="ФормаОтчетОборотыОднойНоменклатурыОборотыНоменклатуры" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Report.ОборотыОднойНоменклатуры.Command.ОборотыНоменклатуры</CommandName>
+				<DataPath>Объект.Owner</DataPath>
+				<ExtendedTooltip name="ФормаОтчетОборотыОднойНоменклатурыОборотыНоменклатурыРасширеннаяПодсказка" id="36"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="30">
+			<DataPath>Объект.Owner</DataPath>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Серия" id="7">
+			<DataPath>Объект.Серия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СерияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СерияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="СрокГодности" id="27">
+			<DataPath>Объект.СрокГодности</DataPath>
+			<ContextMenu name="СрокГодностиКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="СрокГодностиРасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<InputField name="Фирма" id="19">
+			<DataPath>Объект.Фирма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ФирмаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ФирмаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Док" id="10">
+			<DataPath>Объект.Док</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ДокКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДокРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Поставщик" id="13">
+			<DataPath>Объект.Контрагент</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПоставщикКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<UsualGroup name="ГруппаЗакупка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закупка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закупка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗакупкаРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<InputField name="ЦенаЗакупки" id="22">
+					<DataPath>Объект.ЦенаЗакупки</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">true</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">true</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">true</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
+						<xr:Value name="Role.Логистика">true</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">true</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">true</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">true</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+						<xr:Value name="Role.Инвентаризация">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЦенаЗакупкиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЦенаЗакупкиРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="Валюта" id="16">
+					<DataPath>Объект.Валюта</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ЦенаЗакупкиВБазВалюте" id="48">
+					<DataPath>Объект.ЦенаЗакупкиВБазВалюте</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена закупки в USD</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЦенаЗакупкиВБазВалютеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ЦенаЗакупкиВБазВалютеРасширеннаяПодсказка" id="50"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="46">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="ВКД_ЦенаСоСкидкой" id="43">
+					<DataPath>Объект.ВКД_ЦенаСоСкидкой</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">true</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">true</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">true</xr:Value>
+						<xr:Value name="Role.Логистика">true</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">true</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">true</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">true</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+						<xr:Value name="Role.Инвентаризация">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ВКД_ЦенаСоСкидкойКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ВКД_ЦенаСоСкидкойРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<CheckBoxField name="Консигнация" id="37">
+					<DataPath>Объект.Консигнация</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонсигнацияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КонсигнацияРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Партии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="35">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<Button name="ФормаЧтоМожно" id="34">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЧтоМожно</CommandName>
+					<ExtendedTooltip name="ФормаЧтоМожноРасширеннаяПодсказка" id="37"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="28">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="Объект" id="3">
+					<DataPath>Объект</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>60</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ОбъектКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">ОбъектПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ОтбиратьВсе" id="30">
+					<DataPath>ОтбиратьВсе</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтбиратьВсеКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ОтбиратьВсеРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="18">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="НачДата" id="19">
+					<DataPath>НачДата</DataPath>
+					<ContextMenu name="НачДатаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НачДатаРасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">НачДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КонДата" id="21">
+					<DataPath>КонДата</DataPath>
+					<ContextMenu name="КонДатаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="КонДатаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<CheckBoxField name="БезСтандартных" id="24">
+					<DataPath>БезСтандартных</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БезСтандартныхКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="БезСтандартныхРасширеннаяПодсказка" id="44"/>
+				</CheckBoxField>
+				<CheckBoxField name="БезСобытийЖурнала" id="65">
+					<DataPath>БезСобытийЖурнала</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БезСобытийЖурналаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="БезСобытийЖурналаРасширеннаяПодсказка" id="67"/>
+				</CheckBoxField>
+				<Button name="Сформировать" id="23">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<Width>14</Width>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="45"/>
+				</Button>
+				<Button name="МинусДень" id="33">
+					<Type>UsualButton</Type>
+					<Width>4</Width>
+					<CommandName>Form.Command.МинусДень</CommandName>
+					<ExtendedTooltip name="МинусДеньРасширеннаяПодсказка" id="46"/>
+				</Button>
+				<Button name="ПлюсДень" id="32">
+					<Type>UsualButton</Type>
+					<Width>4</Width>
+					<CommandName>Form.Command.ПлюсДень</CommandName>
+					<ExtendedTooltip name="ПлюсДеньРасширеннаяПодсказка" id="47"/>
+				</Button>
+				<Button name="ВывестиСписок" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Item.Табл.StandardCommand.OutputList</CommandName>
+					<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="48"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Табл" id="5">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Табл</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="ТаблКоманднаяПанель" id="7">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблРасширеннаяПодсказка" id="49"/>
+			<SearchStringAddition name="ТаблСтрокаПоиска" id="50">
+				<AdditionSource>
+					<Item>Табл</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблСтрокаПоискаКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="ТаблСтрокаПоискаРасширеннаяПодсказка" id="52"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблСостояниеПросмотра" id="53">
+				<AdditionSource>
+					<Item>Табл</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблСостояниеПросмотраКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="ТаблСостояниеПросмотраРасширеннаяПодсказка" id="55"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблУправлениеПоиском" id="56">
+				<AdditionSource>
+					<Item>Табл</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблУправлениеПоискомКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="ТаблУправлениеПоискомРасширеннаяПодсказка" id="58"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблДата" id="8">
+					<DataPath>Табл.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблДатаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ТаблДатаРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="ТаблИмяПользователя" id="10">
+					<DataPath>Табл.ИмяПользователя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблИмяПользователяКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТаблИмяПользователяРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ТаблПредставлениеСобытия" id="12">
+					<DataPath>Табл.ПредставлениеСобытия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблПредставлениеСобытияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ТаблПредставлениеСобытияРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ТаблКомментарий" id="14">
+					<DataPath>Табл.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблКомментарийКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблКомментарийРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="ТаблПредставлениеДанных" id="16">
+					<DataPath>Табл.ПредставлениеДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблПредставлениеДанныхКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ТаблПредставлениеДанныхРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="ТаблСобытие" id="26">
+					<DataPath>Табл.Событие</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+						<xr:Value name="Role.Логистика">false</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">false</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+					</UserVisible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблСобытиеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблСобытиеРасширеннаяПодсказка" id="64"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Табл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Date</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяПользователя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя пользователя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>User name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеСобытия" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Event</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Note</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеДанных" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление данных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Data presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Событие" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие (внутр)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Event (internal)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Объект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="НачДата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>From</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонДата" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>to</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БезСтандартных" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без стандартных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>No basics</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Edit>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Администратор">true</xr:Value>
+				<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+				<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+				<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+				<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+			</Edit>
+			<Save>
+				<Field>БезСтандартных</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтбиратьВсе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>на всю глубину журнала</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>на всю глубину журнала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтбиратьВсе</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="БезСобытийЖурнала" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без событий журнала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>БезСобытийЖурнала</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="ПлюсДень" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>+1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плюс день</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Plus a day</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПлюсДень</Action>
+		</Command>
+		<Command name="МинусДень" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>-1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>-1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минус день</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Minus a day</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>МинусДень</Action>
+		</Command>
+		<Command name="ЧтоМожно" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автор, Создан, Сохранен, Кем</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Author, Created, Saved</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что можно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Инфо</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЧтоМожно</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Кредиторы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инвойс</dataPath>
+			<field>Инвойс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвойсПланируемаяДатаОплаты</dataPath>
+			<field>ИнвойсПланируемаяДатаОплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата/Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрагентКредитор</dataPath>
+			<field>КонтрагентКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокПоДокументуКредитор</dataPath>
+			<field>СуммаОстатокПоДокументуКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К оплате</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаКредитор</dataPath>
+			<field>ВалютаКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокВсегоКредитор</dataPath>
+			<field>СуммаОстатокВсегоКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий долг</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокПросроченоКредитор</dataPath>
+			<field>СуммаОстатокПросроченоКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просрочено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОплатыПросроченнаяВсегоКредитор</dataPath>
+			<field>СуммаОплатыПросроченнаяВсегоКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оплаты просроченная всего кредитор</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокДолгаВсегоКредитор</dataPath>
+			<field>СуммаОстатокДолгаВсегоКредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма остаток долга всего кредитор</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ВзаиморасчетыСПоставщикамиОстатки.Контрагент,
+	_ВзаиморасчетыСПоставщикамиОстатки.Валюта,
+	_ВзаиморасчетыСПоставщикамиОстатки.СуммаОплатыОстаток КАК СуммаОплатыПросроченная
+ПОМЕСТИТЬ втОбщиеДолгиПросроченные
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСПоставщиками.Остатки(&amp;Период, Инвойс.ПланируемаяДатаОплаты &lt;= &amp;Период) КАК _ВзаиморасчетыСПоставщикамиОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ВзаиморасчетыСПоставщикамиОстатки.Валюта,
+	_ВзаиморасчетыСПоставщикамиОстатки.СуммаОплатыОстаток КАК СуммаОплатыПросроченнаяВсего
+ПОМЕСТИТЬ втОбщиеДолгиПросроченныеВсего
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСПоставщиками.Остатки(&amp;Период, Инвойс.ПланируемаяДатаОплаты &lt;= &amp;Период) КАК _ВзаиморасчетыСПоставщикамиОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ВзаиморасчетыСПоставщикамиОстатки.Контрагент,
+	_ВзаиморасчетыСПоставщикамиОстатки.Валюта,
+	_ВзаиморасчетыСПоставщикамиОстатки.СуммаОплатыОстаток
+ПОМЕСТИТЬ втОбщиеДолгиКонтрагента
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСПоставщиками.Остатки(&amp;Период, ) КАК _ВзаиморасчетыСПоставщикамиОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ВзаиморасчетыСПоставщикамиОстаткиВсего.Валюта,
+	_ВзаиморасчетыСПоставщикамиОстаткиВсего.СуммаОплатыОстаток
+ПОМЕСТИТЬ втОбщиеДолгиВсего
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСПоставщиками.Остатки(&amp;Период, ) КАК _ВзаиморасчетыСПоставщикамиОстаткиВсего
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	_ВзаиморасчетыСПоставщикамиОстатки.Контрагент КАК КонтрагентКредитор,
+	_ВзаиморасчетыСПоставщикамиОстатки.Инвойс.ПланируемаяДатаОплаты,
+	_ВзаиморасчетыСПоставщикамиОстатки.Валюта КАК ВалютаКредитор,
+	ЕСТЬNULL(втОбщиеДолгиКонтрагента.СуммаОплатыОстаток, 0) КАК СуммаОстатокВсегоКредитор,
+	ЕСТЬNULL(втОбщиеДолгиВсего.СуммаОплатыОстаток, 0) КАК СуммаОстатокДолгаВсегоКредитор,
+	_ВзаиморасчетыСПоставщикамиОстатки.СуммаОплатыОстаток КАК СуммаОстатокПоДокументуКредитор,
+	ЕСТЬNULL(втОбщиеДолгиПросроченные.СуммаОплатыПросроченная, 0) КАК СуммаОстатокПросроченоКредитор,
+	ЕСТЬNULL(втОбщиеДолгиПросроченныеВсего.СуммаОплатыПросроченнаяВсего, 0) КАК СуммаОплатыПросроченнаяВсегоКредитор
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСПоставщиками.Остатки КАК _ВзаиморасчетыСПоставщикамиОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ втОбщиеДолгиКонтрагента КАК втОбщиеДолгиКонтрагента
+		ПО _ВзаиморасчетыСПоставщикамиОстатки.Контрагент = втОбщиеДолгиКонтрагента.Контрагент
+			И _ВзаиморасчетыСПоставщикамиОстатки.Валюта = втОбщиеДолгиКонтрагента.Валюта
+		ЛЕВОЕ СОЕДИНЕНИЕ втОбщиеДолгиВсего КАК втОбщиеДолгиВсего
+		ПО _ВзаиморасчетыСПоставщикамиОстатки.Валюта = втОбщиеДолгиВсего.Валюта
+		ЛЕВОЕ СОЕДИНЕНИЕ втОбщиеДолгиПросроченные КАК втОбщиеДолгиПросроченные
+		ПО _ВзаиморасчетыСПоставщикамиОстатки.Контрагент = втОбщиеДолгиПросроченные.Контрагент
+			И _ВзаиморасчетыСПоставщикамиОстатки.Валюта = втОбщиеДолгиПросроченные.Валюта
+		ЛЕВОЕ СОЕДИНЕНИЕ втОбщиеДолгиПросроченныеВсего КАК втОбщиеДолгиПросроченныеВсего
+		ПО _ВзаиморасчетыСПоставщикамиОстатки.Валюта = втОбщиеДолгиПросроченныеВсего.Валюта</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Дебиторы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаемоеПоступлениеДС</dataPath>
+			<field>ОжидаемоеПоступлениеДС</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаДебитор</dataPath>
+			<field>ВалютаДебитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокВсегоДебитор</dataPath>
+			<field>СуммаОстатокВсегоДебитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий долг</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстатокПоДокументуДебитор</dataPath>
+			<field>СуммаОстатокПоДокументуДебитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма остаток по документу дебитор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрагентДебитор</dataPath>
+			<field>КонтрагентДебитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	_ВзаиморасчетыСКлиентамиОстатки.Контрагент,
+	_ВзаиморасчетыСКлиентамиОстатки.СуммаОплатыОстаток
+ПОМЕСТИТЬ втОбщиеДолгиКонтрагента
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСКлиентами.Остатки(&amp;Период, ) КАК _ВзаиморасчетыСКлиентамиОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	_ВзаиморасчетыСКлиентамиОстатки.Контрагент КАК КонтрагентДебитор,
+	_ВзаиморасчетыСКлиентамиОстатки.ОжидаемоеПоступлениеДС,
+	_ВзаиморасчетыСКлиентамиОстатки.Валюта КАК ВалютаДебитор,
+	ЕСТЬNULL(втОбщиеДолгиКонтрагента.СуммаОплатыОстаток, 0) КАК СуммаОстатокВсегоДебитор,
+	_ВзаиморасчетыСКлиентамиОстатки.СуммаОплатыОстаток КАК СуммаОстатокПоДокументуДебитор
+ИЗ
+	РегистрНакопления._ВзаиморасчетыСКлиентами.Остатки(, ) КАК _ВзаиморасчетыСКлиентамиОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ втОбщиеДолгиКонтрагента КАК втОбщиеДолгиКонтрагента
+		ПО _ВзаиморасчетыСКлиентамиОстатки.Контрагент = втОбщиеДолгиКонтрагента.Контрагент</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Остаток</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстаток</dataPath>
+			<field>СуммаОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаОстаток</dataPath>
+			<field>ВалютаОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	_ДенежныеСредстваОстатки.Валюта КАК ВалютаОстаток,
+	_ДенежныеСредстваОстатки.СуммаОстаток КАК СуммаОстаток
+ИЗ
+	РегистрНакопления._ДенежныеСредства.Остатки(&amp;Период,) КАК _ДенежныеСредстваОстатки</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаОстатокВсегоКредитор</dataPath>
+		<expression>Максимум(СуммаОстатокВсегоКредитор)</expression>
+		<group>КонтрагентКредитор</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокПоДокументуКредитор</dataPath>
+		<expression>Сумма(СуммаОстатокПоДокументуКредитор)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокВсегоКредитор</dataPath>
+		<expression>Максимум(СуммаОстатокДолгаВсегоКредитор)</expression>
+		<group>ВалютаКредитор</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокВсегоДебитор</dataPath>
+		<expression>Сумма(СуммаОстатокВсегоДебитор)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокПоДокументуДебитор</dataPath>
+		<expression>Сумма(СуммаОстатокПоДокументуДебитор)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстаток</dataPath>
+		<expression>Сумма(СуммаОстаток)</expression>
+		<group>ВалютаОстаток</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокПросроченоКредитор</dataPath>
+		<expression>Максимум(СуммаОплатыПросроченнаяВсегоКредитор)</expression>
+		<group>ВалютаКредитор</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОстатокПросроченоКредитор</dataPath>
+		<expression>Максимум(СуммаОстатокПросроченоКредитор)</expression>
+		<group>КонтрагентКредитор</group>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КонецПериода (&amp;Период, "ДЕНЬ")</expression>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИнвойсПланируемаяДатаОплаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстатокПоДокументуКредитор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстатокВсегоКредитор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонтрагентКредитор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстаток</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>fb9e4266-9576-43cb-823d-26fdd2c2427c</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИнвойсПланируемаяДатаОплаты</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КонтрагентКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаОплатыПросроченнаяВсегоКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаОстатокДолгаВсегоКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаОстатокПоДокументуКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаОстатокПросроченоКредитор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ИнвойсПланируемаяДатаОплаты</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ПараметрыДанных.Период</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВалютаКредитор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаКредитор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОстатокПоДокументуКредитор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОстатокВсегоКредитор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОстатокПросроченоКредитор</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Исходящие платежи</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ИнвойсПланируемаяДатаОплаты</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИнвойсПланируемаяДатаОплаты</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОстатокПоДокументуКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОстатокВсегоКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОстатокПросроченоКредитор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КонтрагентКредитор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВалютаДебитор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаДебитор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОстатокВсегоДебитор</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Суммы ожд</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВалютаОстаток</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаОстаток</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Баланс</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаОстаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

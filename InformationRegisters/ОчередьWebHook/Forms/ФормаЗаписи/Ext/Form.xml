@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<LabelField name="ИД" id="37">
+			<DataPath>Запись.ИД</DataPath>
+			<ContextMenu name="ИДКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ИДРасширеннаяПодсказка" id="39"/>
+		</LabelField>
+		<InputField name="УчетнаяЗапись" id="1">
+			<DataPath>Запись.УчетнаяЗапись</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТипСобытия" id="4">
+			<DataPath>Запись.ТипСобытия</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТипСобытияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТипСобытияРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ТипСобытияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Склад" id="10">
+			<DataPath>Запись.Склад</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="40">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Номенклатура" id="7">
+					<DataPath>Запись.Номенклатура</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="НоменклатураКод" id="42">
+					<DataPath>Запись.Номенклатура.Code</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НоменклатураКодКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="НоменклатураКодРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="45">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<InputField name="ВидЦены" id="13">
+					<DataPath>Запись.ВидЦены</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВидЦеныКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="ВидЦеныВалюта" id="47">
+					<DataPath>Запись.ВидЦены.Валюта</DataPath>
+					<ChoiceButton>false</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВидЦеныВалютаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ВидЦеныВалютаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Заказ" id="16">
+			<DataPath>Запись.Заказ</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЗаказКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ЗаказРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Создан" id="31">
+			<DataPath>Запись.Создан</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СозданКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="СозданРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="Отправлен" id="19">
+			<DataPath>Запись.Отправлен</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОтправленКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОтправленРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="КоличествоПопыток" id="22">
+			<DataPath>Запись.КоличествоПопыток</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоПопытокКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КоличествоПопытокРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ПоследняяПопытка" id="25">
+			<DataPath>Запись.ПоследняяПопытка</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПоследняяПопыткаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПоследняяПопыткаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Инициатор" id="34">
+			<DataPath>Запись.Инициатор</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИнициаторКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Ошибка" id="28">
+			<DataPath>Запись.Ошибка</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОшибкаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОшибкаРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ОчередьWebHook</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

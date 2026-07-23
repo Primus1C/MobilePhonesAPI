@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметры" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="Склад" id="12">
+					<DataPath>Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="14"/>
+				</InputField>
+				<InputField name="Контрагент" id="15">
+					<DataPath>Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="17"/>
+				</InputField>
+				<InputField name="Количество" id="18">
+					<DataPath>Количество</DataPath>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<CheckBoxField name="ПроводитьДокументы" id="21">
+					<DataPath>ПроводитьДокументы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроводитьДокументыКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ПроводитьДокументыРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+				<InputField name="Примечание" id="53">
+					<DataPath>Примечание</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ГруппыНоменклатуры" id="30">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<AutoAddIncomplete>false</AutoAddIncomplete>
+			<DataPath>ГруппыНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ГруппыНоменклатурыКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="ГруппыНоменклатурыКоманднаяПанель" id="32"/>
+			<ExtendedTooltip name="ГруппыНоменклатурыРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="ГруппыНоменклатурыСтрокаПоиска" id="44">
+				<AdditionSource>
+					<Item>ГруппыНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыНоменклатурыСтрокаПоискаКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ГруппыНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ГруппыНоменклатурыСостояниеПросмотра" id="47">
+				<AdditionSource>
+					<Item>ГруппыНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="ГруппыНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ГруппыНоменклатурыУправлениеПоиском" id="50">
+				<AdditionSource>
+					<Item>ГруппыНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ГруппыНоменклатурыУправлениеПоискомКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="ГруппыНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ГруппыНоменклатурыГруппа" id="34">
+					<DataPath>ГруппыНоменклатуры.Группа</DataPath>
+					<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+					<ContextMenu name="ГруппыНоменклатурыГруппаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ГруппыНоменклатурыГруппаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаКоманды" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Button name="Выполнить" id="42">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьДокументы</CommandName>
+					<ExtendedTooltip name="ВыполнитьРасширеннаяПодсказка" id="43"/>
+				</Button>
+				<Button name="УстановитьОк" id="56">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УстановитьОк</CommandName>
+					<ExtendedTooltip name="УстановитьОкРасширеннаяПодсказка" id="57"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТестовоеОприходованиеСерийнойНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Склад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+			<Save>
+				<Field>Склад</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Контрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+			<Save>
+				<Field>Контрагент</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Количество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество каждого товара</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Количество</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПроводитьДокументы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проводить документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроводитьДокументы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ГруппыНоменклатуры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Группа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Примечание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Примечание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Примечание</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьДокументы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьДокументы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьОк" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить ок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить ок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьОк</Action>
+		</Command>
+	</Commands>
+</Form>

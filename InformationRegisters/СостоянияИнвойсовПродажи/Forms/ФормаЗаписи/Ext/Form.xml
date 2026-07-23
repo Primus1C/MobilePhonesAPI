@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ИнвойсПродажи" id="1">
+			<DataPath>Запись.ИнвойсПродажи</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИнвойсПродажиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИнвойсПродажиРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Состояние" id="4">
+			<DataPath>Запись.Состояние</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СостояниеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КемИзменено" id="7">
+			<DataPath>Запись.КемИзменено</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КемИзмененоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КемИзмененоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Инициатор" id="13">
+			<DataPath>Запись.Инициатор</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИнициаторКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Зарегистрировано" id="16">
+			<DataPath>Запись.Зарегистрировано</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЗарегистрированоКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ЗарегистрированоРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<UsualGroup name="ГруппаАПИ" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа АПИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаАПИРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="ОтмененЗакачиком" id="10">
+					<DataPath>Запись.ОтмененЗакачиком</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтмененЗакачикомКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОтмененЗакачикомРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="Отгружен" id="21">
+					<DataPath>Запись.ГотовКОтгрузке</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОтгруженКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ОтгруженРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="Заблокирован" id="24">
+					<DataPath>Запись.Заблокирован</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗаблокированКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЗаблокированРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СостоянияИнвойсовПродажи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

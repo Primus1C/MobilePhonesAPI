@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Table name="СвойстваНоменклатуры" id="4">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СвойстваНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СвойстваНоменклатурыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СвойстваНоменклатурыКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="СвойстваНоменклатурыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СвойстваНоменклатурыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>СвойстваНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваНоменклатурыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СвойстваНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СвойстваНоменклатурыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>СвойстваНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СвойстваНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СвойстваНоменклатурыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>СвойстваНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СвойстваНоменклатурыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СвойстваНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СвойстваНоменклатурыНомерСтроки" id="17">
+					<DataPath>Объект.СвойстваНоменклатуры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СвойстваНоменклатурыНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СвойстваНоменклатурыНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="СвойстваНоменклатурыСвойство" id="20">
+					<DataPath>Объект.СвойстваНоменклатуры.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СвойстваНоменклатурыСвойствоКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СвойстваНоменклатурыСвойствоРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

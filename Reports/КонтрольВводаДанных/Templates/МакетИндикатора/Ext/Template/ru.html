@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"></meta><title>Solid Gauge 270° с вырезом</title><style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .gauge-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .svg-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* Вращаем группу с кольцами на -90 градусов (старт на 12 часов).
+           При заполнении на 270° по часовой стрелке, левая верхняя четверть (от 9 до 12 часов) останется пустой! 
+        */
+        .rings-group {
+            transform: rotate(-90deg);
+            transform-origin: 200px 200px; /* Центр SVG */
+        }
+        
+        /* Фоновые кольца (подложки) */
+        .track-bg {
+            fill: none;
+            stroke-width: 18;
+            stroke-linecap: round;
+        }
+        
+        /* Кольца с данными */
+        .track-data {
+            fill: none;
+            stroke-width: 18;
+            stroke-linecap: round;
+            /* Пружинистая анимация заполнения */
+            transition: stroke-dasharray 1.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        
+        /* Стили встроенных надписей для колец */
+        .ring-label {
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .ring-val {
+            font-size: 13px;
+            fill: #718096;
+            font-weight: normal;
+        }
+        
+        /* Центральный итог */
+        .center-value {
+            font-size: 42px;
+            font-weight: bold;
+            fill: #2d3748;
+        }
+        .center-text {
+            font-size: 14px;
+            fill: #a0aec0;
+        }
+    </style></head><body>
+
+<div class="gauge-card">
+    <div class="svg-container" id="gauge-container"></div>
+</div>
+
+<script>
+    // 1. Данные для графика
+    const chartData = [
+        { name: 'Задачи',    value: 0, max: 100, color: '#e53e3e', bgColor: '#fed7d7' }, 
+        { name: 'Встречи',   value: 0, max: 100, color: '#38a169', bgColor: '#c6f6d5' }, 
+        { name: 'Звонки',    value: 0, max: 100, color: '#3182ce', bgColor: '#bee3f8' }, 
+        { name: 'Обучение',  value: 0, max: 100, color: '#d69e2e', bgColor: '#fef08a' }  
+    ];
+
+    const size = 400;
+    const center = size / 2;
+    const trackWidth = 18;  
+    const trackGap = 8;     
+    const baseRadius = 160; 
+
+    function renderSolidGauge() {
+        let svgHTML = `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">`;
+        
+        let ringsHTML = `<g class="rings-group">`;
+        let labelsHTML = `<g class="labels-group">`;
+
+        chartData.forEach((item, index) => {
+            const r = baseRadius - (index * (trackWidth + trackGap));
+            // Длина полной окружности
+            const circ = 2 * Math.PI * r;
+            
+            // Вычисляем длину 270 градусов (75% от полного круга)
+            const trackLength = circ * 0.75;
+            const gapLength = circ * 0.25;
+
+            // 1. Рисуем подложку, оставляя разрыв в 25%
+            ringsHTML += `<circle class="track-bg" cx="${center}" cy="${center}" r="${r}" 
+                                  stroke="${item.bgColor}" 
+                                  stroke-dasharray="${trackLength} ${gapLength}" />`;
+
+            // 2. Рисуем цветное кольцо (изначально 0)
+            // Сохраняем trackLength в data-атрибут, чтобы JS знал максимальную длину при 100%
+            ringsHTML += `<circle class="track-data" cx="${center}" cy="${center}" r="${r}" 
+                                  stroke="${item.color}" 
+                                  stroke-dasharray="0 ${circ}" 
+                                  data-circ="${circ}" 
+                                  data-max-dash="${trackLength}" />`;
+
+            // 3. Добавляем надписи в вырез (Верхняя левая четверть)
+            // Так как кольца стартуют сверху (12 часов), мы ставим текст чуть левее оси Y (center - 15)
+            // И выравниваем по правому краю (text-anchor="end")
+            const textY = center - r + 5;
+            labelsHTML += `
+                <text x="${center - 15}" y="${textY}" text-anchor="end" class="ring-label" fill="${item.color}">
+                    ${item.name} 
+                    <tspan class="ring-val" id="val-${index}">0</tspan>
+                </text>
+            `;
+        });
+
+        ringsHTML += `</g>`;
+        labelsHTML += `</g>`;
+
+        // Центральный блок
+        const centerHTML = `
+            <text x="${center}" y="${center + 10}" text-anchor="middle" class="center-value" id="total-val">0</text>
+            <text x="${center}" y="${center + 35}" text-anchor="middle" class="center-text">Total Score</text>
+        `;
+
+        svgHTML += ringsHTML + labelsHTML + centerHTML + `</svg>`;
+        document.getElementById('gauge-container').innerHTML = svgHTML;
+    }
+
+    // Функция обновления (вызывается из 1С)
+    window.UpdateData = function(v1, v2, v3, v4) {
+        chartData[0].value = v1 || 0;
+        chartData[1].value = v2 || 0;
+        chartData[2].value = v3 || 0;
+        chartData[3].value = v4 || 0;
+
+        const tracks = document.querySelectorAll('.track-data');
+        let total = 0;
+
+        tracks.forEach((track, index) => {
+            const val = chartData[index].value;
+            const max = chartData[index].max;
+            total += val;
+            
+            const circ = parseFloat(track.getAttribute('data-circ'));
+            const maxDash = parseFloat(track.getAttribute('data-max-dash')); // Это наши 270 градусов
+            
+            // Вычисляем процент заполнения только от доступных 270 градусов
+            const safeVal = Math.min(val, max); 
+            const dashLength = (safeVal / max) * maxDash;
+            
+            track.setAttribute('stroke-dasharray', `${dashLength} ${circ}`);
+
+            // Обновляем Inline-текст
+            document.getElementById(`val-${index}`).innerText = val;
+        });
+
+        document.getElementById('total-val').innerText = total;
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderSolidGauge();
+        // Тестовый запуск анимации через 150мс
+        setTimeout(() => window.UpdateData(85, 62, 90, 45), 150);
+    });
+</script></body></html>

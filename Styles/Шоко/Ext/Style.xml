@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Style xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Item name="ActivityColor">
+		<Color>#D5891B</Color>
+	</Item>
+	<Item name="AccentColor">
+		<Color>#7F3A0E</Color>
+	</Item>
+	<Item name="NavigationColor">
+		<Color>#17110D</Color>
+	</Item>
+	<Item name="AuxiliaryNavigationColor">
+		<Color>#542409</Color>
+	</Item>
+	<Item name="ImportantColor">
+		<Color>#0B282A</Color>
+	</Item>
+	<Item name="StyleItem.ЦветФонаДополнительнойСтрокиТаблицы">
+		<Color>#148A88</Color>
+	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСлабое">
+		<Color>#FFF8DA</Color>
+	</Item>
+	<Item name="StyleItem.ЦветФонаВыделениеСреднее">
+		<Color>#EED4C6</Color>
+	</Item>
+</Style>

@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименование" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="Наименование" id="43">
+					<DataPath>Наименование</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<Font height="10" bold="true" kind="AutoFont"/>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<Button name="КомандаОк" id="58">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОк</CommandName>
+					<ExtendedTooltip name="КомандаОкРасширеннаяПодсказка" id="59"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Группы" id="7">
+			<DataPath>Группы</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="ГруппыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГруппыРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Поколение" id="22">
+			<DataPath>Поколение</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ПоколениеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПоколениеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="РазмерЧасов" id="31">
+			<DataPath>РазмерЧасов</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="РазмерЧасовКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="РазмерЧасовРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="РазмерРемня" id="28">
+			<DataPath>РазмерРемня</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="РазмерРемняКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="РазмерРемняРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Диагональ" id="10">
+			<DataPath>Диагональ</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ДиагональКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДиагональРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Год" id="4">
+			<DataPath>Год</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ГодКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="МодульСвязи" id="16">
+			<DataPath>МодульСвязи</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="МодульСвязиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="МодульСвязиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="РазмерКлавиатуры" id="25">
+			<DataPath>РазмерКлавиатуры</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="РазмерКлавиатурыКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="РазмерКлавиатурыРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Модель" id="13">
+			<DataPath>Модель</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="МодельКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Объем" id="19">
+			<DataPath>Объем</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ОбъемКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОбъемРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ЦветРемня" id="50">
+			<DataPath>ЦветРемня</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ЦветРемняКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ЦветРемняРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<InputField name="Цвет" id="37">
+			<DataPath>Цвет</DataPath>
+			<ClearButton>true</ClearButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ЦветКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<UsualGroup name="ГруппаСпецификация" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа спецификация</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСпецификацияРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<InputField name="Спецификация" id="34">
+					<DataPath>Спецификация</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<QuickChoice>true</QuickChoice>
+					<ContextMenu name="СпецификацияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СпецификацияРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<PictureField name="КартинкаФлаг" id="55">
+					<DataPath>КартинкаФлаг</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<PictureSize>Proportionally</PictureSize>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.ФлагиСтран</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="КартинкаФлагКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="КартинкаФлагРасширеннаяПодсказка" id="57"/>
+				</PictureField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="NFC" id="1">
+			<DataPath>NFC</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="NFCКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="NFCРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">NFCПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Группы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Groups</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поколение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поколение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерЧасов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерРемня" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер ремня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Диагональ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диагональ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Год" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МодульСвязи" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модуль связи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазмерКлавиатуры" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер клавиатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Модель" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объем" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Цвет" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Спецификация" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="NFC" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>NFC</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветРемня" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет ремня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КартинкаФлаг" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка флаг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОк" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОк</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="605d0126-ebc3-4bc4-a2dc-543ad0d360cf">
+		<Properties>
+			<Name>Закупки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закупки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Purchase</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаЗакупка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаЗакупка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвойсЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СкладыКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Валюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОдинДолгПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОднаПредоплатаПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ЖурналЗакупокИПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_СкидкаПоставщика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_ДополнительныеЗатраты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоставщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Поставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report._ВзаиморасчетыСКонтрагентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report._ОплатыЗаПериодИсходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ВзаиморасчетыСКлиентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВКД_ТоварыВПути</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаЛогистике</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиНаЛогистикеИВПути</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПлатежныйКалендарь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЦеныПоставщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПлатежныйКалендарьЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПлатежныйКалендарьЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Инвентаризация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РезультатИнвентаризации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОплатыПоИнвойсам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоступленияПоследнихДней</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Трекинг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИнвойсыЗакупкиПоМенеджерам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтоимостьОстатков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СрокиХраненияТоваровНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтправкаAWB</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Затраты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Счета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТоварныеГруппыПеревозчиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СведенияТоварныхГруппПеревозчиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Поставки2025</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтправкаПеремещений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПроверкаПриходных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаменаСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.PriceCheck</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварВПути</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

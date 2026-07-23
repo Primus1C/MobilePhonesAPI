@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Введите сумму оплаты</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтчетОборотыДенегОборотыКассы" id="46">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<SkipOnInput>true</SkipOnInput>
+				<Enabled>false</Enabled>
+				<CommandName>0</CommandName>
+				<DataPath>ДСчет</DataPath>
+				<ExtendedTooltip name="ФормаОтчетОборотыДенегОборотыКассыРасширеннаяПодсказка" id="47"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="1">
+			<Width>60</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="Контрагент" id="35">
+					<DataPath>Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<SkipOnInput>true</SkipOnInput>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="Накладных" id="37">
+					<DataPath>Накладных</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<SkipOnInput>true</SkipOnInput>
+					<ContextMenu name="НакладныхКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="НакладныхРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<UsualGroup name="Группа2" id="2">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="Сумма" id="5">
+							<DataPath>Сумма</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<TextColor>#008000</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<LabelField name="ВалютаОбозначение" id="10">
+							<DataPath>Валюта.Обозначение</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ВалютаОбозначениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ВалютаОбозначениеРасширеннаяПодсказка" id="53"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="39">
+			<Width>100</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<UsualGroup name="Группа6" id="42">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="ДСчет" id="40">
+							<DataPath>ДСчет</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ДСчетКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДСчетРасширеннаяПодсказка" id="56"/>
+							<Events>
+								<Event name="OnChange">ДСчетПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="ОбновитьОстатки" id="43">
+							<Type>UsualButton</Type>
+							<Width>10</Width>
+							<CommandName>Form.Command.ОбновитьОстатки</CommandName>
+							<ExtendedTooltip name="ОбновитьОстаткиРасширеннаяПодсказка" id="57"/>
+						</Button>
+						<LabelField name="ОстаткиПоСчету" id="44">
+							<DataPath>ОстаткиПоСчету</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>60</Width>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ОстаткиПоСчетуКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ОстаткиПоСчетуРасширеннаяПодсказка" id="58"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="25">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="Оплата" id="26">
+							<DataPath>Оплата</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ОплатаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ОплатаРасширеннаяПодсказка" id="60"/>
+							<Events>
+								<Event name="OnChange">ОплатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ВалютаОбозначение1" id="28">
+							<DataPath>Валюта.Обозначение</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ВалютаОбозначение1КонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ВалютаОбозначение1РасширеннаяПодсказка" id="61"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСдача" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сдача</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сдача</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСдачаРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<InputField name="Сдача" id="31">
+							<DataPath>Сдача</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<TextColor>#FF0000</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СдачаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СдачаРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<LabelField name="ВалютаОбозначение2" id="33">
+							<DataPath>Валюта.Обозначение</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ВалютаОбозначение2КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ВалютаОбозначение2РасширеннаяПодсказка" id="64"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="СохранитьЗакрыть" id="17">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<SkipOnInput>true</SkipOnInput>
+			<CommandName>Form.Command.СохранитьЗакрыть</CommandName>
+			<ExtendedTooltip name="СохранитьЗакрытьРасширеннаяПодсказка" id="65"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Сумма" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>19</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Валюта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Оплата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>19</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сдача" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>19</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Покупатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Накладных" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Фирма" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фирма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Фирмы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДСчет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Касса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДенежныеСчета</v8:Type>
+			</Type>
+			<Save>
+				<Field>ДСчет</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОстаткиПоСчету" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки по счету</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоВозврат" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это возврат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПриход" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это возврат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоОплатаПоставщику" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЭтоОплатаПоставщику</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EndEdit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьЗакрыть</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьОстатки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Shift+F5</Shortcut>
+			<Action>ОбновитьОстатки</Action>
+		</Command>
+	</Commands>
+</Form>

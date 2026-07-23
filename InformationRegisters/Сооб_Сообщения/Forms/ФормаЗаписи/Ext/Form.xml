@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновные" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група основні</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Группа основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<InputField name="ЗапланированнаяДатаДоставки" id="7">
+							<DataPath>Запись.ЗапланированнаяДатаДоставки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доставить / Напомнить</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Send / Remind</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗапланированнаяДатаДоставкиКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ЗапланированнаяДатаДоставкиРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Получатель" id="1">
+							<DataPath>Запись.Получатель</DataPath>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ПолучательКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">ПолучательПриИзменении</Event>
+								<Event name="StartListChoice">ПолучательНачалоВыбораИзСписка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСвойства" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа свойства</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група властивості</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Группа свойства</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСвойстваРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<InputField name="Категория" id="13">
+							<DataPath>Запись.Категория</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="КатегорияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ТипСообщения" id="10">
+							<DataPath>Запись.ТипСообщения</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ТипСообщенияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ТипСообщенияРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">ТипСообщенияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Тема" id="79">
+					<DataPath>Запись.Тема</DataPath>
+					<Visible>false</Visible>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ТемаКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="81"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СсылкаНаОбъект" id="86">
+			<DataPath>Запись.СсылкаНаОбъект</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на объект</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Object</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="87"/>
+			<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="88"/>
+		</InputField>
+		<UsualGroup name="ГруппаВыполнение" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виконання</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<CheckBoxField name="Выполнено" id="96">
+					<DataPath>Запись.Выполнено</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполненоКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="ВыполненоРасширеннаяПодсказка" id="98"/>
+					<Events>
+						<Event name="OnChange">ВыполненоПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДатаВыполнения" id="40">
+					<DataPath>Запись.ДатаВыполнения</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДатаВыполненияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДатаВыполненияРасширеннаяПодсказка" id="42"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраниц" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Група сторінок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<Page name="ГруппаОсновная" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сообщение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Message</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Группа основная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<InputField name="Сообщение" id="19">
+							<DataPath>Запись.Сообщение</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<ContextMenu name="СообщениеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="Комментарий" id="55">
+							<DataPath>Запись.Комментарий</DataPath>
+							<Visible>false</Visible>
+							<SkipOnInput>true</SkipOnInput>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<UsualGroup name="ГруппаДополнений" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дополнений</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Група доповнень</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Группа дополнений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополненийРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<Button name="ДобавитьКомментарий" id="82">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ДобавитьКомментарий</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Добавить автора и время комментария</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Додати автора і час коментаря</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДобавитьКомментарийРасширеннаяПодсказка" id="83"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПараметры" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры и удаление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Parameters &amp; Deleting</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыполненияИУдаления" id="92">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнение и удаление</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Виконання і видалення</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаВыполненияИУдаленияРасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПринятияВыполнения" id="99">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнение принято</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Виконання прийнято</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа принятия выполнения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПринятияВыполненияРасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<CheckBoxField name="МожноУдалять" id="52">
+											<DataPath>Запись.МожноУдалять</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МожноУдалятьКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="МожноУдалятьРасширеннаяПодсказка" id="54"/>
+											<Events>
+												<Event name="OnChange">МожноУдалятьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДатаМожноУдалять" id="101">
+											<DataPath>Запись.ДатаМожноУдалять</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ДатаМожноУдалятьКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ДатаМожноУдалятьРасширеннаяПодсказка" id="103"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаУдаления" id="104">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удаление</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Видалення</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа удаления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаУдаленияРасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПометкаУдаления" id="129">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка удаления</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Позначка видалення</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа пометка удаления</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПометкаУдаленияРасширеннаяПодсказка" id="130"/>
+											<ChildItems>
+												<CheckBoxField name="ПометитьНаУдаление" id="106">
+													<DataPath>Запись.ПометитьНаУдаление</DataPath>
+													<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПометитьНаУдалениеКонтекстноеМеню" id="107"/>
+													<ExtendedTooltip name="ПометитьНаУдалениеРасширеннаяПодсказка" id="108"/>
+													<Events>
+														<Event name="OnChange">ПометитьНаУдалениеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ДатаПометкиНаУдаление" id="109">
+													<DataPath>Запись.ДатаПометкиНаУдаление</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="ДатаПометкиНаУдалениеКонтекстноеМеню" id="110"/>
+													<ExtendedTooltip name="ДатаПометкиНаУдалениеРасширеннаяПодсказка" id="111"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаБлокировка" id="124">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блокировка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Блокування</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа блокировка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаБлокировкаРасширеннаяПодсказка" id="125"/>
+											<ChildItems>
+												<CheckBoxField name="ВременноНеУдалять" id="112">
+													<DataPath>Запись.ВременноНеУдалять</DataPath>
+													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВременноНеУдалятьКонтекстноеМеню" id="113"/>
+													<ExtendedTooltip name="ВременноНеУдалятьРасширеннаяПодсказка" id="114"/>
+													<Events>
+														<Event name="OnChange">ВременноНеУдалятьПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="КтоЗаблокировал" id="126">
+													<DataPath>Запись.КтоЗаблокировал</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="КтоЗаблокировалКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="КтоЗаблокировалРасширеннаяПодсказка" id="128"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСобытий" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>События сообщения</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Події повідомлення</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа событий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСобытийРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЛево" id="117">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група ліво</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="118"/>
+									<ChildItems>
+										<InputField name="ДатаСоздания" id="31">
+											<DataPath>Запись.ДатаСоздания</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="33"/>
+										</InputField>
+										<InputField name="ДатаПервогоПолучения" id="34">
+											<DataPath>Запись.ДатаПервогоПолучения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запл-но первое получение</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Запл-но перше отримання</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДатаПервогоПолученияКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ДатаПервогоПолученияРасширеннаяПодсказка" id="36"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПраво" id="119">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа право</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Група право</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа право</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="120"/>
+									<ChildItems>
+										<InputField name="ДатаПервогоПросмотра" id="37">
+											<DataPath>Запись.ДатаПервогоПросмотра</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ДатаПервогоПросмотраКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ДатаПервогоПросмотраРасширеннаяПодсказка" id="39"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="УникИдент" id="121">
+							<DataPath>Запись.УникИдент</DataPath>
+							<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<ContextMenu name="УникИдентКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="УникИдентРасширеннаяПодсказка" id="123"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПереадресация" id="73">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа переадресация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Група переадресація</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Группа переадресация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПереадресацияРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<InputField name="ДатаПереадресации" id="43">
+							<DataPath>Запись.ДатаПереадресации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДатаПереадресацииКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДатаПереадресацииРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="Переправил" id="46">
+							<DataPath>Запись.Переправил</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ПереправилКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ПереправилРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="СписокПереадресации" id="49">
+							<DataPath>Запись.СписокПереадресации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СписокПереадресацииКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="СписокПереадресацииРасширеннаяПодсказка" id="51"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Автор" id="4">
+			<DataPath>Запись.Автор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="АвторКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="6"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Сооб_Сообщения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьКомментарий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить комментарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Додати коментар</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить комментарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Сооб_ДобавитьВКомментарий</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьКомментарий</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

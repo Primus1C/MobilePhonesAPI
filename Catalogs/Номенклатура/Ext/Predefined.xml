@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.18">
+	<Item id="ab3810e9-8cf4-4b93-a781-5ef5bab1c21e">
+		<Name>Служебные</Name>
+		<Code xsi:type="xs:decimal">1</Code>
+		<Description>Служебные</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="976c24d3-51e0-4743-888c-c27678a808cd">
+				<Name>ДополнительныеЗатраты</Name>
+				<Code xsi:type="xs:decimal">3</Code>
+				<Description>Дополнительные затраты</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b99a844e-a12e-4106-a1c0-e84f1cec3894">
+				<Name>ЗатратыИнвойсов</Name>
+				<Code xsi:type="xs:decimal">2</Code>
+				<Description>Затраты инвойсов</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.18">
+	<Item id="b6abc8f9-c0b9-4c28-a904-49290b165145">
+		<Name>NFC</Name>
+		<Code/>
+		<Description>NFC</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="64428cb0-0e2b-4775-ab83-6d4e5818e81b">
+		<Name>Год</Name>
+		<Code/>
+		<Description>Год</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="63938902-1d2e-4d83-a7a5-d9f0708c8dce">
+		<Name>Диагональ</Name>
+		<Code/>
+		<Description>Диагональ</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e1545b39-7eee-4420-b5d5-3644be9f725d">
+		<Name>Модель</Name>
+		<Code/>
+		<Description>Модель</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e111e91f-e6d2-40cf-8ca2-6b4125cc10d3">
+		<Name>МодульСвязи</Name>
+		<Code/>
+		<Description>Модуль связи</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="393611c8-dd31-426f-a103-0e7ff91b68a0">
+		<Name>Объем</Name>
+		<Code/>
+		<Description>Объем</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="da2c1867-1d51-40fe-8927-364f2c6c1844">
+		<Name>Поколение</Name>
+		<Code/>
+		<Description>Поколение</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="df0eea23-8af9-40bf-bbb0-cc77d43d099f">
+		<Name>РазмерКлавиатуры</Name>
+		<Code/>
+		<Description>Размер клавиатуры</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="80ef2e23-9b69-4f54-966c-f05521658b8f">
+		<Name>РазмерРемня</Name>
+		<Code/>
+		<Description>Размер ремня</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6db8c384-a867-4c2a-b0a9-a11d6e204009">
+		<Name>РазмерЧасов</Name>
+		<Code/>
+		<Description>Размер часов</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6fbb1d6e-46a4-4948-a439-20b7bb114e91">
+		<Name>Спецификация</Name>
+		<Code/>
+		<Description>Спецификация</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="080113f7-c1c7-4097-9efa-430502738e82">
+		<Name>Цвет</Name>
+		<Code/>
+		<Description>Цвет</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fd07b293-2261-4b68-a445-cd9831d9c8c9">
+		<Name>ЦветРемня</Name>
+		<Code/>
+		<Description>Цвет ремня</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Sequence uuid="3ae179cb-4b44-4b09-9ba4-a3d7e278b4d7">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.ПартииВалют" category="Record">
+				<xr:TypeId>13936c76-e44b-483b-9df9-d442162be096</xr:TypeId>
+				<xr:ValueId>90037cf0-c0da-4a13-88e2-2a91321f77bf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.ПартииВалют" category="Manager">
+				<xr:TypeId>4ca83e2b-98a8-4e34-b4c4-e762b61a3c8b</xr:TypeId>
+				<xr:ValueId>a40381a3-3e63-4790-8287-d2ec06db369a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.ПартииВалют" category="RecordSet">
+				<xr:TypeId>fd6d288f-8939-43b2-8976-797dc27909ee</xr:TypeId>
+				<xr:ValueId>5b140b23-32f9-492c-b545-edf30bb0b7f3</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПартииВалют</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партии валют</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>Move</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПартииВалюты</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Managed</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="4ba92caa-2dbc-4cd7-ace6-ee08ce6bdc65">
+				<Properties>
+					<Name>Касса</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Касса</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДенежныеСчета</v8:Type>
+					</Type>
+					<DocumentMap/>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПартииВалюты.Dimension.Касса</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="a9d079c2-340f-4c01-80fe-1f914f6df7b3">
+				<Properties>
+					<Name>Валюта</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+					<DocumentMap/>
+					<RegisterRecordsMap>
+						<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПартииВалюты.Dimension.Валюта</xr:Item>
+					</RegisterRecordsMap>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Sequence>
+</MetaDataObject>

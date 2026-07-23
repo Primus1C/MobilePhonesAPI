@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandsVisibility>
+		<Command name="Catalog.Номенклатура.Command.Номенклатура">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Контрагенты.Command.Контрагенты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПриходнаяНакладная.Command.ПриходныеНакладные">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.РасходнаяНакладная.Command.РасходныеНакладные">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ВозвратПоставщику.Command.ВозвратыПоставщикам">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document._ВозвратОтПокупателя.Command.ВозвратОтПокупателя">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.Перемещение.Command.Перемещения">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОборотыСерии">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ДвижениеДенег.Command.ДвиженияДенег">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Валюты.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.КурсыВалют.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Города.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ДенежныеСчета.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+				<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+				<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+				<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+				<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+				<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаИнвестиции">false</xr:Value>
+				<xr:Value name="Role.ВидимостьНаценки">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ИзменениеОтсрочки">false</xr:Value>
+				<xr:Value name="Role.ПриходованиеВводомНаОсновании">false</xr:Value>
+				<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+				<xr:Value name="Role.Отправка">false</xr:Value>
+				<xr:Value name="Role.Инвентаризация">false</xr:Value>
+				<xr:Value name="Role.ОтчетИнвентаризация">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Регионы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Склады.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Статьи.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+				<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+				<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+				<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+				<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+				<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаИнвестиции">false</xr:Value>
+				<xr:Value name="Role.ВидимостьНаценки">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ИзменениеОтсрочки">false</xr:Value>
+				<xr:Value name="Role.ПриходованиеВводомНаОсновании">false</xr:Value>
+				<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+				<xr:Value name="Role.Отправка">false</xr:Value>
+				<xr:Value name="Role.Инвентаризация">false</xr:Value>
+				<xr:Value name="Role.ОтчетИнвентаризация">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Страны.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+				<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+				<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+				<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+				<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+				<xr:Value name="Role.Логистика">false</xr:Value>
+				<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+				<xr:Value name="Role.Зарплата">false</xr:Value>
+				<xr:Value name="Role.Телеграм">false</xr:Value>
+				<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+				<xr:Value name="Role.МетреонПолный">false</xr:Value>
+				<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+				<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+				<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+				<xr:Value name="Role.МетреонСклад">false</xr:Value>
+				<xr:Value name="Role.Разработка">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+				<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+				<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Фирмы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+				<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+				<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+				<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report._Взаиморасчеты.Command.Взаиморасчеты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОборотыТовара.Command.ОборотыТовара">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.Резервы.Command.Резервы">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.Поставки.Command.Поставки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.Продажи.Command.Продажи">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ЗаказТовара.Command.ЗаказТовара">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ВедомостьПокупателей.Command.ВедомостьПокупатели">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ВедомостьПоставщиков.Command.ВедомостьПоставщики">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОборотыДенег.Command.ОборотыДенег">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОборотыРасходыДоходы.Command.ОборотыРасходыДоходы">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОборотыЗарплаты.Command.ОборотыЗарплаты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОборотыПодотчета.Command.ОборотыПодотчета">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.StandardActiveUsers.Command.АктивныеПользователи">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.StandardDeleteMarkedObjects.Command.УдалениеПомеченных">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.StandardDocumentsPosting.Command.ПроведениеДокументов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+				<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Catalog.Номенклатура.Command.Номенклатура">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Контрагенты.Command.Контрагенты">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ПриходнаяНакладная.Command.ПриходныеНакладные">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.РасходнаяНакладная.Command.РасходныеНакладные">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ВозвратПоставщику.Command.ВозвратыПоставщикам">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document._ВозвратОтПокупателя.Command.ВозвратОтПокупателя">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.Перемещение.Command.Перемещения">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОборотыСерии">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ДвижениеДенег.Command.ДвиженияДенег">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Валюты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.КурсыВалют.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Города.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ДенежныеСчета.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Регионы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Склады.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Статьи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Страны.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Фирмы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report._Взаиморасчеты.Command.Взаиморасчеты">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОборотыТовара.Command.ОборотыТовара">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.Резервы.Command.Резервы">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.Поставки.Command.Поставки">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.Продажи.Command.Продажи">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ЗаказТовара.Command.ЗаказТовара">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ВедомостьПокупателей.Command.ВедомостьПокупатели">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ВедомостьПоставщиков.Command.ВедомостьПоставщики">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОборотыДенег.Command.ОборотыДенег">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОборотыРасходыДоходы.Command.ОборотыРасходыДоходы">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОборотыЗарплаты.Command.ОборотыЗарплаты">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОборотыПодотчета.Command.ОборотыПодотчета">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.StandardActiveUsers.Command.АктивныеПользователи">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.StandardDeleteMarkedObjects.Command.УдалениеПомеченных">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.StandardDocumentsPosting.Command.ПроведениеДокументов">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Catalog.Номенклатура.Command.Номенклатура">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Контрагенты.Command.Контрагенты">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.ПриходнаяНакладная.Command.ПриходныеНакладные">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.РасходнаяНакладная.Command.РасходныеНакладные">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.ВозвратПоставщику.Command.ВозвратыПоставщикам">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document._ВозвратОтПокупателя.Command.ВозвратОтПокупателя">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.Перемещение.Command.Перемещения">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОборотыСерии">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.ДвижениеДенег.Command.ДвиженияДенег">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Валюты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.КурсыВалют.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Города.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ДенежныеСчета.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Регионы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Склады.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Статьи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Страны.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Фирмы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report._Взаиморасчеты.Command.Взаиморасчеты">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ОборотыТовара.Command.ОборотыТовара">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.Резервы.Command.Резервы">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.Поставки.Command.Поставки">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.Продажи.Command.Продажи">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ЗаказТовара.Command.ЗаказТовара">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ВедомостьПокупателей.Command.ВедомостьПокупатели">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ВедомостьПоставщиков.Command.ВедомостьПоставщики">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ОборотыДенег.Command.ОборотыДенег">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ОборотыРасходыДоходы.Command.ОборотыРасходыДоходы">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ОборотыЗарплаты.Command.ОборотыЗарплаты">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.ОборотыПодотчета.Command.ОборотыПодотчета">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.StandardActiveUsers.Command.АктивныеПользователи">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.StandardDeleteMarkedObjects.Command.УдалениеПомеченных">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.StandardDocumentsPosting.Command.ПроведениеДокументов">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+	</GroupsOrder>
+</CommandInterface>

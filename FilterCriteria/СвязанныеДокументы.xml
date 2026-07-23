@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<FilterCriterion uuid="49b75903-eda0-41c3-a0df-0d9228ddc368">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.СвязанныеДокументы" category="Manager">
+				<xr:TypeId>e6c344fd-2a15-40d7-804c-dbaa4b565a4d</xr:TypeId>
+				<xr:ValueId>24b26f36-9f78-4d9a-96ea-b0fbc515a78d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.СвязанныеДокументы" category="List">
+				<xr:TypeId>228ea641-0b4f-4a35-ad73-1692d8b277b4</xr:TypeId>
+				<xr:ValueId>d7504542-4680-4e4f-922f-81eeab1c8050</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СвязанныеДокументы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связанные документы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:DocumentRef._Инвойс</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвойсЗакупки</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИнвойсПродажи</v8:Type>
+			</Type>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаИнвойса.Attribute.Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Отправка.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная.Attribute.ВКД_Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document._Инвойс.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходнаяНакладная.Attribute.ДокументОснование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратПоставщику.TabularSection.Привязки.Attribute.Док2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РасходнаяНакладная.TabularSection.Привязки.Attribute.Док2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег.TabularSection.Привязки.Attribute.Док2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВКД_СкидкаПоставщика.TabularSection.Документы.Attribute.Документ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтправкаAWB.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ДвижениеДенег.TabularSection.Инвойсы.Attribute.Инвойс</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗапретитьДоступОстатки" id="67">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗапретитьДоступОстатки</CommandName>
+				<ExtendedTooltip name="ФормаЗапретитьДоступОстаткиРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаРазрешитьДоступОстатки" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РазрешитьДоступОстатки</CommandName>
+				<ExtendedTooltip name="ФормаРазрешитьДоступОстаткиРасширеннаяПодсказка" id="70"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="12">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="Картинка" id="58">
+					<DataPath>Список.Картинка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияПользователи</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="КартинкаКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="КартинкаРасширеннаяПодсказка" id="60"/>
+				</PictureField>
+				<LabelField name="Наименование" id="22">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Код" id="25">
+					<DataPath>Список.Код</DataPath>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.User</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<ContextMenu name="КодКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Сотрудник" id="74">
+					<DataPath>Список.Сотрудник</DataPath>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<LabelField name="Тэг" id="80">
+					<DataPath>Список.Тэг</DataPath>
+					<ContextMenu name="ТэгКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ТэгРасширеннаяПодсказка" id="82"/>
+				</LabelField>
+				<LabelField name="Роли" id="61">
+					<DataPath>Список.Роли</DataPath>
+					<AutoCellHeight>true</AutoCellHeight>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>5</MaxHeight>
+					<ContextMenu name="РолиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="РолиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<CheckBoxField name="ДоступКОстаткамТоваров" id="64">
+					<DataPath>Список.ДоступКОстаткамТоваров</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ост.</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДоступКОстаткамТоваровКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ДоступКОстаткамТоваровРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<LabelField name="Контрагентов" id="55">
+					<DataPath>Список.Контрагентов</DataPath>
+					<ContextMenu name="КонтрагентовКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="КонтрагентовРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="Складов" id="46">
+					<DataPath>Список.Складов</DataPath>
+					<ContextMenu name="СкладовКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СкладовРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="СкладовОтправителя" id="52">
+					<DataPath>Список.СкладовОтправителя</DataPath>
+					<ContextMenu name="СкладовОтправителяКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СкладовОтправителяРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ДенежныхСчетов" id="49">
+					<DataPath>Список.ДенежныхСчетов</DataPath>
+					<ContextMenu name="ДенежныхСчетовКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДенежныхСчетовРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="ПоследнийВход" id="71">
+					<DataPath>Список.ПоследнийВход</DataPath>
+					<ContextMenu name="ПоследнийВходКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ПоследнийВходРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+				<LabelField name="ДатаУвольнения" id="77">
+					<DataPath>Список.ДатаУвольнения</DataPath>
+					<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<CheckBoxField name="НеВидетьЧужиеНакладные" id="40">
+					<DataPath>Список.НеВидетьЧужиеНакладные</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>хЧ/НК</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеВидетьЧужиеНакладныеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="НеВидетьЧужиеНакладныеРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеВидетьЧужиеПродажиВОтчете" id="43">
+					<DataPath>Список.НеВидетьЧужиеПродажиВОтчете</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>хЧ/О</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеВидетьЧужиеПродажиВОтчетеКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="НеВидетьЧужиеПродажиВОтчетеРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьСканерШК" id="34">
+					<DataPath>Список.ИспользоватьСканерШК</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исп.сканер ш/к</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьСканерШККонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ИспользоватьСканерШКРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<CheckBoxField name="КлавиатурныйСканерШК" id="37">
+					<DataPath>Список.КлавиатурныйСканерШК</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>"Клав." ск. ш/к</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлавиатурныйСканерШККонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КлавиатурныйСканерШКРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<LabelField name="МожноСеансов" id="31">
+					<DataPath>Список.МожноСеансов</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="МожноСеансовКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="МожноСеансовРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<CheckBoxField name="НеПроверятьСеансы" id="28">
+					<DataPath>Список.НеПроверятьСеансы</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПроверятьСеансыКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НеПроверятьСеансыРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВариантДоступаККонтрагентам</Field>
+				<Field>Список.ДенежныеСчетаИсключать</Field>
+				<Field>Список.ИдентификаторПользователяИБ</Field>
+				<Field>Список.ПользовательИБ</Field>
+				<Field>Список.Роли</Field>
+				<Field>Список.СкладыИсключать</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВЫРАЗИТЬ("" КАК СТРОКА(200)) КАК Роли,
+	Пользователи.Ссылка КАК Ссылка,
+	Пользователи.ПометкаУдаления КАК ПометкаУдаления,
+	Пользователи.Код КАК Код,
+	Пользователи.Наименование КАК Наименование,
+	Пользователи.НеПроверятьСеансы КАК НеПроверятьСеансы,
+	Пользователи.МожноСеансов КАК МожноСеансов,
+	Пользователи.ИспользоватьСканерШК КАК ИспользоватьСканерШК,
+	Пользователи.БитДанных КАК БитДанных,
+	Пользователи.Порт КАК Порт,
+	Пользователи.Скорость КАК Скорость,
+	Пользователи.СтопСимвол КАК СтопСимвол,
+	Пользователи.СообщатьСобытияШК КАК СообщатьСобытияШК,
+	Пользователи.КлавиатурныйСканерШК КАК КлавиатурныйСканерШК,
+	Пользователи.НеВидетьЧужиеНакладные КАК НеВидетьЧужиеНакладные,
+	Пользователи.НеВидетьЧужиеПродажиВОтчете КАК НеВидетьЧужиеПродажиВОтчете,
+	ВЫБОР
+		КОГДА Пользователи.СкладыИсключать
+			ТОГДА -Пользователи.Складов
+		ИНАЧЕ Пользователи.Складов
+	КОНЕЦ КАК Складов,
+	Пользователи.СкладовОтправителя КАК СкладовОтправителя,
+	Пользователи.СкладыИсключать КАК СкладыИсключать,
+	ВЫБОР
+		КОГДА Пользователи.ДенежныеСчетаИсключать
+			ТОГДА -Пользователи.ДенежныхСчетов
+		ИНАЧЕ Пользователи.ДенежныхСчетов
+	КОНЕЦ КАК ДенежныхСчетов,
+	Пользователи.ДенежныеСчетаИсключать КАК ДенежныеСчетаИсключать,
+	Пользователи.Контрагентов КАК Контрагентов,
+	Пользователи.ИдентификаторПользователяИБ КАК ИдентификаторПользователяИБ,
+	Пользователи.TelegramID КАК TelegramID,
+	Пользователи.ПользовательИБ КАК ПользовательИБ,
+	Пользователи.КемСоздан КАК КемСоздан,
+	Пользователи.Создан КАК Создан,
+	Пользователи.КемСохранен КАК КемСохранен,
+	Пользователи.Сохранен КАК Сохранен,
+	Пользователи.ПотребоватьСменуПароляПриВходе КАК ПотребоватьСменуПароляПриВходе,
+	Пользователи.ВходВПрограммуРазрешен КАК ВходВПрограммуРазрешен,
+	ВЫБОР
+		КОГДА Пользователи.ПользовательИБ
+			ТОГДА ВЫБОР
+					КОГДА Пользователи.ВходВПрограммуРазрешен
+						ТОГДА ВЫБОР
+								КОГДА НЕ Пользователи.ПарольУстановлен
+									ТОГДА 3
+								ИНАЧЕ ВЫБОР
+										КОГДА Пользователи.ПотребоватьСменуПароляПриВходе
+											ТОГДА 2
+										ИНАЧЕ 1
+									КОНЕЦ
+							КОНЕЦ
+					ИНАЧЕ 4
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК Картинка,
+	Пользователи.ВариантДоступаККонтрагентам КАК ВариантДоступаККонтрагентам,
+	Пользователи.ДоступКОстаткамТоваров КАК ДоступКОстаткамТоваров,
+	Пользователи.ДатаПоследнегоВхода КАК ПоследнийВход,
+	Пользователи.Сотрудник КАК Сотрудник,
+	Пользователи.Сотрудник.ДатаУвольнения КАК ДатаУвольнения,
+	Пользователи.Тэг КАК Тэг
+ИЗ
+	Справочник.Пользователи КАК Пользователи</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПарольУстановлен</dcssch:dataPath>
+					<dcssch:field>ПарольУстановлен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкладыКонтрагентов</dcssch:dataPath>
+					<dcssch:field>СкладыКонтрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сотрудник</dcssch:dataPath>
+					<dcssch:field>Сотрудник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДенежныхСчетов</dcssch:dataPath>
+					<dcssch:field>ДенежныхСчетов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Денежных счетов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПотребоватьСменуПароляПриВходе</dcssch:dataPath>
+					<dcssch:field>ПотребоватьСменуПароляПриВходе</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагенты</dcssch:dataPath>
+					<dcssch:field>Контрагенты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьСканерШК</dcssch:dataPath>
+					<dcssch:field>ИспользоватьСканерШК</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Склады</dcssch:dataPath>
+					<dcssch:field>Склады</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДенежныеСчета</dcssch:dataPath>
+					<dcssch:field>ДенежныеСчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОграниченияПоСкладам</dcssch:dataPath>
+					<dcssch:field>ОграниченияПоСкладам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Офисы</dcssch:dataPath>
+					<dcssch:field>Офисы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Контрагентов</dcssch:dataPath>
+					<dcssch:field>Контрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МожноСеансов</dcssch:dataPath>
+					<dcssch:field>МожноСеансов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеПроверятьСеансы</dcssch:dataPath>
+					<dcssch:field>НеПроверятьСеансы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>БитДанных</dcssch:dataPath>
+					<dcssch:field>БитДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Порт</dcssch:dataPath>
+					<dcssch:field>Порт</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПользовательИБ</dcssch:dataPath>
+					<dcssch:field>ПользовательИБ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Скорость</dcssch:dataPath>
+					<dcssch:field>Скорость</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеВидетьЧужиеПродажиВОтчете</dcssch:dataPath>
+					<dcssch:field>НеВидетьЧужиеПродажиВОтчете</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтопСимвол</dcssch:dataPath>
+					<dcssch:field>СтопСимвол</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СообщатьСобытияШК</dcssch:dataPath>
+					<dcssch:field>СообщатьСобытияШК</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КлавиатурныйСканерШК</dcssch:dataPath>
+					<dcssch:field>КлавиатурныйСканерШК</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеВидетьЧужиеНакладные</dcssch:dataPath>
+					<dcssch:field>НеВидетьЧужиеНакладные</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Складов</dcssch:dataPath>
+					<dcssch:field>Складов</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Складов</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкладовОтправителя</dcssch:dataPath>
+					<dcssch:field>СкладовОтправителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемСоздан</dcssch:dataPath>
+					<dcssch:field>КемСоздан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкладыИсключать</dcssch:dataPath>
+					<dcssch:field>СкладыИсключать</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>TelegramID</dcssch:dataPath>
+					<dcssch:field>TelegramID</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДенежныеСчетаИсключать</dcssch:dataPath>
+					<dcssch:field>ДенежныеСчетаИсключать</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторПользователяИБ</dcssch:dataPath>
+					<dcssch:field>ИдентификаторПользователяИБ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сохранен</dcssch:dataPath>
+					<dcssch:field>Сохранен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Создан</dcssch:dataPath>
+					<dcssch:field>Создан</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемСохранен</dcssch:dataPath>
+					<dcssch:field>КемСохранен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВариантДоступаККонтрагентам</dcssch:dataPath>
+					<dcssch:field>ВариантДоступаККонтрагентам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВходВПрограммуРазрешен</dcssch:dataPath>
+					<dcssch:field>ВходВПрограммуРазрешен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Картинка</dcssch:dataPath>
+					<dcssch:field>Картинка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Роли</dcssch:dataPath>
+					<dcssch:field>Роли</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роли</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДоступКОстаткамТоваров</dcssch:dataPath>
+					<dcssch:field>ДоступКОстаткамТоваров</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнегоВхода</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнегоВхода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГраницаПросмотра</dcssch:dataPath>
+					<dcssch:field>ГраницаПросмотра</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПоследнийВход</dcssch:dataPath>
+					<dcssch:field>ПоследнийВход</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний вход</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УстанавливатьОкончательноВПриходныхНакладных</dcssch:dataPath>
+					<dcssch:field>УстанавливатьОкончательноВПриходныхНакладных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасширенныеФункцииРазработчика</dcssch:dataPath>
+					<dcssch:field>РасширенныеФункцииРазработчика</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаУвольнения</dcssch:dataPath>
+					<dcssch:field>ДатаУвольнения</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата увольнения</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Тэг</dcssch:dataPath>
+					<dcssch:field>Тэг</dcssch:field>
+				</Field>
+				<MainTable>Catalog.Пользователи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Складов</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Складов</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+									<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ПоследнийВход</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+										<dcsset:comparisonType>Equal</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">ПоследнийВход</dcsset:left>
+										<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FF9292</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВходВПрограммуРазрешен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаСтрокиИсключаемойИзВыбора</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Наименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ПользовательИБ</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection/>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ВходВПрограммуРазрешен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Контрагентов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ВариантДоступаККонтрагентам</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантДоступа.Запретить</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Контрагентов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ВариантДоступаККонтрагентам</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантДоступа.Разрешить</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="РазрешитьДоступОстатки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить доступ к товарным остаткам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить доступ остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceFlagGreen</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазрешитьДоступ</Action>
+		</Command>
+		<Command name="ЗапретитьДоступОстатки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить доступ к товарным остаткам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить доступ остатки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceFlagRed</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗапретитьДоступ</Action>
+		</Command>
+	</Commands>
+</Form>

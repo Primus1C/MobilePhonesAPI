@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="16">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<CheckBoxField name="Сооб_ИспользоватьСообщения" id="4">
+			<DataPath>НаборКонстант.Сооб_ИспользоватьСообщения</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="Сооб_ИспользоватьСообщенияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="Сооб_ИспользоватьСообщенияРасширеннаяПодсказка" id="6"/>
+		</CheckBoxField>
+		<InputField name="Сооб_ПериодПроверкиСообщений" id="1">
+			<DataPath>НаборКонстант.Сооб_ПериодПроверкиСообщений</DataPath>
+			<ContextMenu name="Сооб_ПериодПроверкиСообщенийКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="Сооб_ПериодПроверкиСообщенийРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Сооб_ПериодОбновленияЧата" id="13">
+			<DataPath>НаборКонстант.Сооб_ПериодОбновленияЧата</DataPath>
+			<ContextMenu name="Сооб_ПериодОбновленияЧатаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Сооб_ПериодОбновленияЧатаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="Сооб_АвтоматическиУдалять" id="10">
+			<DataPath>НаборКонстант.Сооб_АвтоматическиУдалять</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="Сооб_АвтоматическиУдалятьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="Сооб_АвтоматическиУдалятьРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<InputField name="Сооб_ДнейДоУдаления" id="7">
+			<DataPath>НаборКонстант.Сооб_ДнейДоУдаления</DataPath>
+			<ContextMenu name="Сооб_ДнейДоУдаленияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="Сооб_ДнейДоУдаленияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

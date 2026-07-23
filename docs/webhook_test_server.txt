@@ -1,0 +1,157 @@
+﻿Инструкция: тестовый сервер вебхуков 1С
+Базовый URL
+http://37.44.215.33:3099
+Главный endpoint: POST /webhooks/1c
+т.е. все запросы кидаем на http://37.44.215.33:3099/webhooks/1c
+Авторизация (Bearer) :
+токен - jkdsfiu840320-eFEW324klsdfoi234
+Без ключа (или с неверным) сервер вернёт 401
+`GET /health`, `GET /schema`, `GET /history` — без авторизации
+Типы событий (`eventType`)
+`Остаток`
+`Цена`
+`Наличие` | Появились новые позиции → запросить карточки; `available: false` → снять с наличия | «Ок, запрашиваю новые позиции…» | , этот кейс если вдруг надо убрать из продажи какие либо позиции , но они лежат на складе.
+Обязательно в теле:
+- `eventType` — одно из значений выше
+- `items` — непустой массив; у каждой позиции нужен `itemCode`
+Остальные поля (`batchId`, `createdAt`, любые доп. поля из 1С) допускаются.
+Примеры тел запросов
+1. Остатки
+{
+"batchId": "stock-2026-07-16-001",
+"eventType": "Остаток",
+"createdAt": "2026-07-16T15:00:00",
+"items": [
+{
+"eventId": "s1",
+"itemCode": "12345",
+"item": "Товар А",
+"warehouse": "1",
+"balance": "10",
+"reserve": "2"
+},
+{
+"eventId": "s2",
+"itemCode": "67890",
+"item": "Товар Б",
+"warehouse": "1",
+"balance": "5",
+"reserve": "0"
+}
+]
+}
+Пример успешного ответа 200:
+{
+"ok": true,
+"message": "Ок, обновляю остатки по 2 позициям: 12345, 67890",
+"action": "update_stock",
+"batchId": "stock-2026-07-16-001",
+"eventType": "Остаток",
+"itemsProcessed": 2,
+"historyId": "af17e3b0-0211-43c4-8d06-8fdf15fff72f",
+"receivedAt": "2026-07-16T15:38:31.903Z"
+}
+2. Цены
+{
+"batchId": "price-2026-07-16-001",
+"eventType": "Цена",
+"createdAt": "2026-07-16T15:10:00",
+"items": [
+{
+"eventId": "p1",
+"itemCode": "12345",
+"item": "Товар А",
+"price": "1990.50",
+"currency": "RUB",
+"priceType": "Розница"
+},
+{
+"eventId": "p2",
+"itemCode": "67890",
+"item": "Товар Б",
+"price": "450",
+"currency": "RUB",
+"priceType": "Розница"
+}
+]
+}
+Ответ 200 :
+{
+"ok": true,
+"message": "Ок, обновляю цены по 2 позициям: 12345, 67890",
+"action": "update_price",
+"batchId": "price-2026-07-16-001",
+"eventType": "Цена",
+"itemsProcessed": 2,
+"historyId": "94e74971-d652-4f9e-a5d6-76406838f34b",
+"receivedAt": "2026-07-16T15:37:59.030Z"
+}
+3. Наличие / новый ассортимент
+Сигнал: появились новые позиции — сервер ответит, что **запрашивает** карточки
+{
+"batchId": "assort-2026-07-16-001",
+"eventType": "Наличие",
+"createdAt": "2026-07-16T15:20:00",
+"items": [
+{
+"eventId": "a1",
+"itemCode": "99901",
+"item": "Новый товар В",
+"isNew": true,
+"available": true,
+"price": "1250",
+"balance": "15",
+"warehouse": "1"
+},
+{
+"eventId": "a2",
+"itemCode": "99902",
+"item": "Новый товар Г",
+"isNew": true,
+"available": true,
+"price": "890",
+"balance": "4"
+}
+]
+}
+200:
+{
+"ok": true,
+"message": "Ок, запрашиваю новые позиции: 99901, 99902",
+"action": "fetch_assortment",
+"batchId": "assort-2026-07-16-001",
+"eventType": "Наличие",
+"itemsProcessed": 2,
+"historyId": "84d450b4-2aab-4e0f-a1dd-eb4fa464caa0",
+"receivedAt": "2026-07-16T15:38:52.389Z"
+}
+Снятие с наличия:
+{
+"batchId": "assort-off-001",
+"eventType": "Наличие",
+"items": [
+{ "itemCode": "12345", "item": "Товар А", "available": false }
+]
+}
+200 :
+{
+"ok": true,
+"message": "Ок, снимаю с наличия: 12345",
+"action": "deactivate_assortment",
+"batchId": "assort-off-001",
+"eventType": "Наличие",
+"itemsProcessed": 1,
+"historyId": "6060153e-0564-4a01-8db6-e1d4ad1d063b",
+"receivedAt": "2026-07-16T15:39:18.916Z"
+}
+Другие эндпоинты
+| `GET` | `/health` | Жив ли сервер |
+| `GET` | `/schema` | Контракт и примеры полей |
+| `GET` | `/history?limit=50` | Последние принятые вебхуки |
+| `GET` | `/history/batch/:batchId` | Найти пакет по `batchId` |
+Ошибки:
+401 - Нет `Authorization`, неверный ключ, или не формат `Bearer …`
+400 - Невалидный JSON
+400 -  Некорректное тело вебхука (валидация)
+404 -  Несуществующий путь или `batchId` не найден в `/history/batch/:id`
+500 - Внутренняя ошибка сервера

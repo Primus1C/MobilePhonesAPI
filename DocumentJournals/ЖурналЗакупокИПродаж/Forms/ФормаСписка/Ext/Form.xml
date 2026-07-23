@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Button name="ВКассу" id="61">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.ВКассу</CommandName>
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<RepresentationInContextMenu>None</RepresentationInContextMenu>
+			<ExtendedTooltip name="ВКассуРасширеннаяПодсказка" id="62"/>
+		</Button>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Дата" id="16">
+					<DataPath>Список.Date</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="Номер" id="19">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="Тип" id="22">
+					<DataPath>Список.Type</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ТипКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="25">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Склад" id="28">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Куда" id="55">
+					<DataPath>Список.Куда</DataPath>
+					<ContextMenu name="КудаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="КудаРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="СтрПроцент" id="40">
+					<DataPath>Список.СтрПроцент</DataPath>
+					<ContextMenu name="СтрПроцентКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СтрПроцентРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Валюта" id="31">
+					<DataPath>Список.Валюта</DataPath>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Строк" id="37">
+					<DataPath>Список.Строк</DataPath>
+					<ContextMenu name="СтрокКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СтрокРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Долг" id="58">
+					<DataPath>Список.Долг</DataPath>
+					<ContextMenu name="ДолгКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="Сумма" id="34">
+					<DataPath>Список.Сумма</DataPath>
+					<ContextMenu name="СуммаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="Состояние" id="52">
+					<DataPath>Список.Состояние</DataPath>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="Примечание" id="49">
+					<DataPath>Список.Примечание</DataPath>
+					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="КемСоздан" id="46">
+					<DataPath>Список.КемСоздан</DataPath>
+					<ContextMenu name="КемСозданКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="КемСозданРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Докум.Ссылка,
+	Докум.Дата,
+	Докум.ПометкаУдаления,
+	Докум.Номер,
+	Докум.Проведен,
+	Докум.Контрагент,
+	Докум.Склад,
+	Докум.Валюта,
+	Докум.Сумма,
+	Докум.Строк,
+	Докум.СтрПроцент,
+	Докум.Тип,
+	Докум.Ссылка.КемСоздан КАК КемСоздан,
+	Докум.Ссылка.Примечание КАК Примечание,
+	Докум.Ссылка.Окончательно,
+	ВЫБОР
+		КОГДА Докум.Ссылка.Окончательно
+				И Докум.Сумма &gt; 0
+			ТОГДА ВЫБОР
+					КОГДА ЕСТЬNULL(Рег.ДолгПокупателяОстаток, 0) &lt;&gt; 0
+						ТОГДА ВЫБОР
+								КОГДА ЕСТЬNULL(Рег.ДолгПокупателяОстаток, 0) &lt;&gt; Докум.Сумма
+									ТОГДА ЗНАЧЕНИЕ(Перечисление.Долги.Частично)
+								ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.Долги.Неоплачено)
+							КОНЕЦ
+					ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.Долги.Полностью)
+				КОНЕЦ
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.Долги.НеЗакрыто)
+	КОНЕЦ КАК Состояние,
+	Докум.Ссылка.Куда КАК Куда,
+	ЕСТЬNULL(Рег.ДолгПокупателяОстаток, 0) КАК Долг
+ИЗ
+	ЖурналДокументов.ЖурналЗакупокИПродаж КАК Докум
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Долги.Остатки КАК Рег
+		ПО Докум.Ссылка = Рег.Док</QueryText>
+				<MainTable>DocumentJournal.ЖурналЗакупокИПродаж</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>СтрПроцент</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтрПроцент</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">0</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИмяДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВКассу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В кассу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В кассу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AccumulationRegister</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВКассу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

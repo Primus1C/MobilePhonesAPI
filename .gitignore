@@ -1,0 +1,16 @@
+# 1C binary and temporary files
+*.cf
+*.cfe
+*.dt
+*.1cd
+*.lgd
+*.tmp
+*.bak
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store

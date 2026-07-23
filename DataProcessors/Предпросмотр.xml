@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<DataProcessor uuid="ec2ab0c7-2339-4532-8fad-fbad49d9fa77">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.Предпросмотр" category="Object">
+				<xr:TypeId>b6dc2739-4b5f-40c1-9038-f1fa708a398d</xr:TypeId>
+				<xr:ValueId>84f4b1fb-9423-40e3-b40f-3d21a154affc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.Предпросмотр" category="Manager">
+				<xr:TypeId>29cd23ce-e23f-429a-a07c-5cb96e9686be</xr:TypeId>
+				<xr:ValueId>833e0b0f-76d1-4a26-addc-9b74b7fc2374</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Предпросмотр</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпросмотр</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаПредпросмотра</Form>
+			<Template>Предпросмотр_Макет</Template>
+			<Template>Предпросмотр_СкриптБиблиотека</Template>
+			<Template>Предпросмотр_СкриптWorker</Template>
+			<Template>Spiner</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

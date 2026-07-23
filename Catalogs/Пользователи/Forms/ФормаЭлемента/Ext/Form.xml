@@ -1,0 +1,1672 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГрСтраницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гр страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГрСтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГрАутентификация" id="96">
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+						<xr:Value name="Role.Логистика">false</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">false</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аутентификация 1С</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Зашифрован</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГрАутентификацияРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВерх" id="186">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа верх</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа верх</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Double</HorizontalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="187"/>
+							<ChildItems>
+								<CheckBoxField name="ВходВПрограммуРазрешен" id="98">
+									<DataPath>Объект.ВходВПрограммуРазрешен</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВходВПрограммуРазрешенКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ВходВПрограммуРазрешенРасширеннаяПодсказка" id="100"/>
+									<Events>
+										<Event name="OnChange">ВходВПрограммуРазрешенПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelField name="ИдентификаторПользователяИБ" id="188">
+									<DataPath>Объект.ИдентификаторПользователяИБ</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<ContextMenu name="ИдентификаторПользователяИБКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ИдентификаторПользователяИБРасширеннаяПодсказка" id="190"/>
+								</LabelField>
+								<LabelDecoration name="ДекорацияНеПользовательИБ" id="274">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не является пользователем ИБ (не предусмотрен  вход в программу)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь не является пользователем информационной базы. Для него вход в программу не предусмотрен</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияНеПользовательИБКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="ДекорацияНеПользовательИБРасширеннаяПодсказка" id="276"/>
+								</LabelDecoration>
+								<Button name="СоздатьПользователяИБ" id="310">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СоздатьПользователяИБ</CommandName>
+									<ExtendedTooltip name="СоздатьПользователяИБРасширеннаяПодсказка" id="311"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГрСвойстваАутентификации" id="104">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аутентификация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр свойства аутентификации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГрСвойстваАутентификацииРасширеннаяПодсказка" id="105"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПароль" id="106">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пароль</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="107"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияПарольЕсть" id="318">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация пароль есть</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Зашифрован</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияПарольЕстьКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="ДекорацияПарольЕстьРасширеннаяПодсказка" id="320"/>
+										</PictureDecoration>
+										<PictureDecoration name="ДекорацияПароляНет" id="315">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация пароля нет</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ВниманиеКрасный</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияПароляНетКонтекстноеМеню" id="316"/>
+											<ExtendedTooltip name="ДекорацияПароляНетРасширеннаяПодсказка" id="317"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьНаличиеПароля" id="110">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пустой пароль</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Порожній пароль</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьНаличиеПароляКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="НадписьНаличиеПароляРасширеннаяПодсказка" id="112"/>
+										</LabelDecoration>
+										<Button name="СменитьПароль" id="108">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СменитьПароль</CommandName>
+											<ExtendedTooltip name="СменитьПарольРасширеннаяПодсказка" id="109"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="ПотребоватьСменуПароляПриВходе" id="312">
+									<DataPath>Объект.ПотребоватьСменуПароляПриВходе</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПотребоватьСменуПароляПриВходеКонтекстноеМеню" id="313"/>
+									<ExtendedTooltip name="ПотребоватьСменуПароляПриВходеРасширеннаяПодсказка" id="314"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПользовательИБЗапрещеноИзменятьПароль" id="116">
+									<DataPath>ПользовательИБЗапрещеноИзменятьПароль</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПользовательИБЗапрещеноИзменятьПарольКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ПользовательИБЗапрещеноИзменятьПарольРасширеннаяПодсказка" id="118"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПользовательИБПоказыватьВСпискеВыбора" id="119">
+									<DataPath>ПользовательИБПоказыватьВСпискеВыбора</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПользовательИБПоказыватьВСпискеВыбораКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ПользовательИБПоказыватьВСпискеВыбораРасширеннаяПодсказка" id="121"/>
+								</CheckBoxField>
+								<InputField name="ПользовательИБЯзык" id="164">
+									<DataPath>ПользовательИБЯзык</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<DropListButton>true</DropListButton>
+									<ContextMenu name="ПользовательИБЯзыкКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ПользовательИБЯзыкРасширеннаяПодсказка" id="166"/>
+								</InputField>
+								<UsualGroup name="ГруппаРоли" id="356">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа роли</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРолиРасширеннаяПодсказка" id="357"/>
+									<ChildItems>
+										<Table name="РолиПользователя" id="167">
+											<Representation>List</Representation>
+											<TitleLocation>Left</TitleLocation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SelectionMode>SingleRow</SelectionMode>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<DataPath>РолиПользователя</DataPath>
+											<RowPictureDataPath>РолиПользователя.Picture</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Роли</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="РолиПользователяКонтекстноеМеню" id="168"/>
+											<AutoCommandBar name="РолиПользователяКоманднаяПанель" id="169"/>
+											<ExtendedTooltip name="РолиПользователяРасширеннаяПодсказка" id="170"/>
+											<SearchStringAddition name="РолиПользователяСтрокаПоиска" id="171">
+												<AdditionSource>
+													<Item>РолиПользователя</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РолиПользователяСтрокаПоискаКонтекстноеМеню" id="172"/>
+												<ExtendedTooltip name="РолиПользователяСтрокаПоискаРасширеннаяПодсказка" id="173"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="РолиПользователяСостояниеПросмотра" id="174">
+												<AdditionSource>
+													<Item>РолиПользователя</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РолиПользователяСостояниеПросмотраКонтекстноеМеню" id="175"/>
+												<ExtendedTooltip name="РолиПользователяСостояниеПросмотраРасширеннаяПодсказка" id="176"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="РолиПользователяУправлениеПоиском" id="177">
+												<AdditionSource>
+													<Item>РолиПользователя</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="РолиПользователяУправлениеПоискомКонтекстноеМеню" id="178"/>
+												<ExtendedTooltip name="РолиПользователяУправлениеПоискомРасширеннаяПодсказка" id="179"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">РолиПользователяПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">РолиПользователяПередУдалением</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="РолиПользователяЗначение" id="180">
+													<DataPath>РолиПользователя.Value</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РолиПользователяЗначениеКонтекстноеМеню" id="181"/>
+													<ExtendedTooltip name="РолиПользователяЗначениеРасширеннаяПодсказка" id="182"/>
+												</InputField>
+												<CheckBoxField name="РолиПользователяПометка" id="183">
+													<DataPath>РолиПользователя.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="РолиПользователяПометкаКонтекстноеМеню" id="184"/>
+													<ExtendedTooltip name="РолиПользователяПометкаРасширеннаяПодсказка" id="185"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+										<Button name="СкопироватьРоли" id="358">
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<CommandName>Form.Command.СкопироватьРоли</CommandName>
+											<ExtendedTooltip name="СкопироватьРолиРасширеннаяПодсказка" id="359"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГрОсновное" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalStretch>true</VerticalStretch>
+					<Picture>
+						<xr:Ref>StdPicture.CollaborationSystemExternalUser</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГрОсновноеРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">КодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="МожноСеансов" id="10">
+							<DataPath>Объект.МожноСеансов</DataPath>
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.Администратор">true</xr:Value>
+								<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+								<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+								<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+								<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+								<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+								<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+								<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+								<xr:Value name="Role.Менеджер">false</xr:Value>
+								<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+								<xr:Value name="Role.Логистика">false</xr:Value>
+								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+								<xr:Value name="Role.Зарплата">false</xr:Value>
+								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+								<xr:Value name="Role.МетреонПолный">true</xr:Value>
+								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+								<xr:Value name="Role.МетреонСклад">false</xr:Value>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МожноСеансовКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="МожноСеансовРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<CheckBoxField name="НеПроверятьСеансы" id="7">
+							<DataPath>Объект.НеПроверятьСеансы</DataPath>
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.Администратор">true</xr:Value>
+								<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+								<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+								<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+								<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+								<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+								<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+								<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+								<xr:Value name="Role.Менеджер">false</xr:Value>
+								<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+								<xr:Value name="Role.Логистика">false</xr:Value>
+								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+								<xr:Value name="Role.Зарплата">false</xr:Value>
+								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+								<xr:Value name="Role.МетреонПолный">true</xr:Value>
+								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+								<xr:Value name="Role.МетреонСклад">false</xr:Value>
+								<xr:Value name="Role.Разработка">false</xr:Value>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеПроверятьСеансыКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НеПроверятьСеансыРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="НеВидетьЧужиеПродажиВОтчете" id="51">
+							<DataPath>Объект.НеВидетьЧужиеПродажиВОтчете</DataPath>
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.Администратор">true</xr:Value>
+								<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+								<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+								<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+								<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+								<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+								<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+								<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+								<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+								<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+								<xr:Value name="Role.Менеджер">false</xr:Value>
+								<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+								<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+								<xr:Value name="Role.Логистика">false</xr:Value>
+								<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+								<xr:Value name="Role.Зарплата">false</xr:Value>
+								<xr:Value name="Role.Телеграм">false</xr:Value>
+								<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+								<xr:Value name="Role.МетреонПолный">true</xr:Value>
+								<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+								<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+								<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+								<xr:Value name="Role.МетреонСклад">false</xr:Value>
+								<xr:Value name="Role.Разработка">false</xr:Value>
+							</UserVisible>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеВидетьЧужиеПродажиВОтчетеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="НеВидетьЧужиеПродажиВОтчетеРасширеннаяПодсказка" id="53"/>
+						</CheckBoxField>
+						<InputField name="Сотрудник" id="337">
+							<DataPath>Объект.Сотрудник</DataPath>
+							<ContextMenu name="СотрудникКонтекстноеМеню" id="338"/>
+							<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="339"/>
+						</InputField>
+						<InputField name="ДатаПоследнегоВхода" id="350">
+							<DataPath>Объект.ДатаПоследнегоВхода</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДатаПоследнегоВходаКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="ДатаПоследнегоВходаРасширеннаяПодсказка" id="352"/>
+						</InputField>
+						<CheckBoxField name="Менеджер" id="334">
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="МенеджерКонтекстноеМеню" id="335"/>
+							<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="336"/>
+						</CheckBoxField>
+						<UsualGroup name="Telegram" id="191">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Telegram</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Telegram</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="TelegramРасширеннаяПодсказка" id="192"/>
+							<ChildItems>
+								<InputField name="TelegramID" id="193">
+									<DataPath>Объект.TelegramID</DataPath>
+									<ContextMenu name="TelegramIDКонтекстноеМеню" id="194"/>
+									<ExtendedTooltip name="TelegramIDРасширеннаяПодсказка" id="195"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Тэг" id="363">
+							<DataPath>Объект.Тэг</DataPath>
+							<DropListButton>true</DropListButton>
+							<ContextMenu name="ТэгКонтекстноеМеню" id="364"/>
+							<ExtendedTooltip name="ТэгРасширеннаяПодсказка" id="365"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГрДоступКОбъектам" id="321">
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+						<xr:Value name="Role.Логистика">false</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">false</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступ к объектам</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceBoxesThreeFilled</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<VerticalSpacing>Double</VerticalSpacing>
+					<ExtendedTooltip name="ГрДоступКОбъектамРасширеннаяПодсказка" id="322"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="343">
+							<HorizontalSpacing>Double</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="344"/>
+							<ChildItems>
+								<CheckBoxField name="РазрешеноВидетьОстатки" id="340">
+									<DataPath>Объект.ДоступКОстаткамТоваров</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РазрешеноВидетьОстаткиКонтекстноеМеню" id="341"/>
+									<ExtendedTooltip name="РазрешеноВидетьОстаткиРасширеннаяПодсказка" id="342"/>
+								</CheckBoxField>
+								<CheckBoxField name="НеВидетьЧужиеНакладные" id="48">
+									<DataPath>Объект.НеВидетьЧужиеНакладные</DataPath>
+									<UserVisible>
+										<xr:Common>true</xr:Common>
+										<xr:Value name="Role.Администратор">true</xr:Value>
+										<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+										<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+										<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+										<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+										<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+										<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+										<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+										<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+										<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+										<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+										<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+										<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+										<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+										<xr:Value name="Role.Менеджер">false</xr:Value>
+										<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+										<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+										<xr:Value name="Role.Логистика">false</xr:Value>
+										<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+										<xr:Value name="Role.Зарплата">false</xr:Value>
+										<xr:Value name="Role.Телеграм">false</xr:Value>
+										<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+										<xr:Value name="Role.МетреонПолный">true</xr:Value>
+										<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+										<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+										<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+										<xr:Value name="Role.МетреонСклад">false</xr:Value>
+									</UserVisible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для расходных накладных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеВидетьЧужиеНакладныеКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НеВидетьЧужиеНакладныеРасширеннаяПодсказка" id="50"/>
+								</CheckBoxField>
+								<CheckBoxField name="РасширенныеФункцииРазработчика" id="360">
+									<DataPath>Объект.РасширенныеФункцииРазработчика</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасширенныеФункцииРазработчикаКонтекстноеМеню" id="361"/>
+									<ExtendedTooltip name="РасширенныеФункцииРазработчикаРасширеннаяПодсказка" id="362"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="Группа2" id="323">
+							<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="324"/>
+							<ChildItems>
+								<Page name="ГрДенежныеСчета" id="75">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Денежные счета</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Денежные счета</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleDataPath>Объект.ДенежныеСчета.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГрДенежныеСчетаРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<CheckBoxField name="ДенежныеСчетаИсключать" id="280">
+											<DataPath>Объект.ДенежныеСчетаИсключать</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДенежныеСчетаИсключатьКонтекстноеМеню" id="281"/>
+											<ExtendedTooltip name="ДенежныеСчетаИсключатьРасширеннаяПодсказка" id="282"/>
+										</CheckBoxField>
+										<Table name="ДенежныеСчета" id="77">
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Объект.ДенежныеСчета</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ДенежныеСчетаКонтекстноеМеню" id="78"/>
+											<AutoCommandBar name="ДенежныеСчетаКоманднаяПанель" id="79">
+												<ChildItems>
+													<Button name="ДенежныеСчетаСкопироватьДенежныеСчета" id="272">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СкопироватьДенежныеСчета</CommandName>
+														<ExtendedTooltip name="ДенежныеСчетаСкопироватьДенежныеСчетаРасширеннаяПодсказка" id="273"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДенежныеСчетаРасширеннаяПодсказка" id="80"/>
+											<SearchStringAddition name="ДенежныеСчетаСтрокаПоиска" id="81">
+												<AdditionSource>
+													<Item>ДенежныеСчета</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДенежныеСчетаСтрокаПоискаКонтекстноеМеню" id="82"/>
+												<ExtendedTooltip name="ДенежныеСчетаСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДенежныеСчетаСостояниеПросмотра" id="84">
+												<AdditionSource>
+													<Item>ДенежныеСчета</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДенежныеСчетаСостояниеПросмотраКонтекстноеМеню" id="85"/>
+												<ExtendedTooltip name="ДенежныеСчетаСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДенежныеСчетаУправлениеПоиском" id="87">
+												<AdditionSource>
+													<Item>ДенежныеСчета</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДенежныеСчетаУправлениеПоискомКонтекстноеМеню" id="88"/>
+												<ExtendedTooltip name="ДенежныеСчетаУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeDeleteRow">ДенежныеСчетаПередУдалением</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="ДенежныеСчетаНомерСтроки" id="90">
+													<DataPath>Объект.ДенежныеСчета.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДенежныеСчетаНомерСтрокиКонтекстноеМеню" id="91"/>
+													<ExtendedTooltip name="ДенежныеСчетаНомерСтрокиРасширеннаяПодсказка" id="92"/>
+												</LabelField>
+												<InputField name="ДенежныеСчетаДенежныйСчет" id="93">
+													<DataPath>Объект.ДенежныеСчета.ДенежныйСчет</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДенежныеСчетаДенежныйСчетКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ДенежныеСчетаДенежныйСчетРасширеннаяПодсказка" id="95"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГрСклады" id="54">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склады</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склады</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<TitleDataPath>Объект.Склады.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГрСкладыРасширеннаяПодсказка" id="55"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСкладыЛев" id="332">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа склады лев</v8:content>
+												</v8:item>
+											</Title>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСкладыЛевРасширеннаяПодсказка" id="333"/>
+											<ChildItems>
+												<CheckBoxField name="СкладыИсключать" id="277">
+													<DataPath>Объект.СкладыИсключать</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СкладыИсключатьКонтекстноеМеню" id="278"/>
+													<ExtendedTooltip name="СкладыИсключатьРасширеннаяПодсказка" id="279"/>
+												</CheckBoxField>
+												<Table name="Склады" id="56">
+													<Height>3</Height>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>Объект.Склады</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Склады фирмы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleFont ref="style:TextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="СкладыКонтекстноеМеню" id="57"/>
+													<AutoCommandBar name="СкладыКоманднаяПанель" id="58">
+														<ChildItems>
+															<Button name="СкладыСкопироватьСкладыПользователя" id="266">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.СкопироватьСкладыПользователя</CommandName>
+																<ExtendedTooltip name="СкладыСкопироватьСкладыПользователяРасширеннаяПодсказка" id="267"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="59"/>
+													<SearchStringAddition name="СкладыСтрокаПоиска" id="60">
+														<AdditionSource>
+															<Item>Склады</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="61"/>
+														<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СкладыСостояниеПросмотра" id="63">
+														<AdditionSource>
+															<Item>Склады</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="64"/>
+														<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СкладыУправлениеПоиском" id="66">
+														<AdditionSource>
+															<Item>Склады</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="67"/>
+														<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="BeforeDeleteRow">СкладыПередУдалением</Event>
+													</Events>
+													<ChildItems>
+														<LabelField name="СкладыНомерСтроки" id="69">
+															<DataPath>Объект.Склады.LineNumber</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="70"/>
+															<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="71"/>
+														</LabelField>
+														<InputField name="СкладыСклад" id="72">
+															<DataPath>Объект.Склады.Склад</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="СкладыСкладКонтекстноеМеню" id="73"/>
+															<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="74"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаСкладыПрав" id="330">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа склады прав</v8:content>
+												</v8:item>
+											</Title>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСкладыПравРасширеннаяПодсказка" id="331"/>
+											<ChildItems>
+												<Table name="ОграниченияПоСкладам" id="283">
+													<TitleLocation>Top</TitleLocation>
+													<Height>3</Height>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>Объект.ОграниченияПоСкладам</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ограничения по складам</v8:content>
+														</v8:item>
+													</Title>
+													<TitleFont ref="style:TextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ОграниченияПоСкладамКонтекстноеМеню" id="284"/>
+													<AutoCommandBar name="ОграниченияПоСкладамКоманднаяПанель" id="285">
+														<ChildItems>
+															<Button name="ОграниченияПоСкладамСкопироватьОграниченияПоСкладам" id="308">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.СкопироватьОграниченияПоСкладам</CommandName>
+																<ExtendedTooltip name="ОграниченияПоСкладамСкопироватьОграниченияПоСкладамРасширеннаяПодсказка" id="309"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ОграниченияПоСкладамРасширеннаяПодсказка" id="286"/>
+													<SearchStringAddition name="ОграниченияПоСкладамСтрокаПоиска" id="287">
+														<AdditionSource>
+															<Item>ОграниченияПоСкладам</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОграниченияПоСкладамСтрокаПоискаКонтекстноеМеню" id="288"/>
+														<ExtendedTooltip name="ОграниченияПоСкладамСтрокаПоискаРасширеннаяПодсказка" id="289"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ОграниченияПоСкладамСостояниеПросмотра" id="290">
+														<AdditionSource>
+															<Item>ОграниченияПоСкладам</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОграниченияПоСкладамСостояниеПросмотраКонтекстноеМеню" id="291"/>
+														<ExtendedTooltip name="ОграниченияПоСкладамСостояниеПросмотраРасширеннаяПодсказка" id="292"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ОграниченияПоСкладамУправлениеПоиском" id="293">
+														<AdditionSource>
+															<Item>ОграниченияПоСкладам</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ОграниченияПоСкладамУправлениеПоискомКонтекстноеМеню" id="294"/>
+														<ExtendedTooltip name="ОграниченияПоСкладамУправлениеПоискомРасширеннаяПодсказка" id="295"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="BeforeDeleteRow">ОграниченияПоСкладамПередУдалением</Event>
+													</Events>
+													<ChildItems>
+														<LabelField name="ОграниченияПоСкладамНомерСтроки" id="296">
+															<DataPath>Объект.ОграниченияПоСкладам.LineNumber</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ОграниченияПоСкладамНомерСтрокиКонтекстноеМеню" id="297"/>
+															<ExtendedTooltip name="ОграниченияПоСкладамНомерСтрокиРасширеннаяПодсказка" id="298"/>
+														</LabelField>
+														<InputField name="ОграниченияПоСкладамСклад" id="299">
+															<DataPath>Объект.ОграниченияПоСкладам.Склад</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ОграниченияПоСкладамСкладКонтекстноеМеню" id="300"/>
+															<ExtendedTooltip name="ОграниченияПоСкладамСкладРасширеннаяПодсказка" id="301"/>
+														</InputField>
+														<InputField name="ОграниченияПоСкладамОграничение" id="302">
+															<DataPath>Объект.ОграниченияПоСкладам.Ограничение</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ОграниченияПоСкладамОграничениеКонтекстноеМеню" id="303"/>
+															<ExtendedTooltip name="ОграниченияПоСкладамОграничениеРасширеннаяПодсказка" id="304"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГрСкладыКонтрагентов" id="325">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Склады контрагентов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleDataPath>Объект.СкладыКонтрагентов.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГрСкладыКонтрагентовРасширеннаяПодсказка" id="326"/>
+									<ChildItems>
+										<Table name="СкладыКонтрагентов" id="196">
+											<TitleLocation>Top</TitleLocation>
+											<Height>5</Height>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.СкладыКонтрагентов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Доступны склады контрагентов</v8:content>
+												</v8:item>
+											</Title>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="СкладыКонтрагентовКонтекстноеМеню" id="197"/>
+											<AutoCommandBar name="СкладыКонтрагентовКоманднаяПанель" id="198">
+												<ChildItems>
+													<Button name="СкладыКонтрагентовСкопироватьСкладыКонтрагентов" id="268">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СкопироватьСкладыКонтрагентов</CommandName>
+														<ExtendedTooltip name="СкладыКонтрагентовСкопироватьСкладыКонтрагентовРасширеннаяПодсказка" id="269"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СкладыКонтрагентовРасширеннаяПодсказка" id="199"/>
+											<SearchStringAddition name="СкладыКонтрагентовСтрокаПоиска" id="200">
+												<AdditionSource>
+													<Item>СкладыКонтрагентов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СкладыКонтрагентовСтрокаПоискаКонтекстноеМеню" id="201"/>
+												<ExtendedTooltip name="СкладыКонтрагентовСтрокаПоискаРасширеннаяПодсказка" id="202"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СкладыКонтрагентовСостояниеПросмотра" id="203">
+												<AdditionSource>
+													<Item>СкладыКонтрагентов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СкладыКонтрагентовСостояниеПросмотраКонтекстноеМеню" id="204"/>
+												<ExtendedTooltip name="СкладыКонтрагентовСостояниеПросмотраРасширеннаяПодсказка" id="205"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СкладыКонтрагентовУправлениеПоиском" id="206">
+												<AdditionSource>
+													<Item>СкладыКонтрагентов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СкладыКонтрагентовУправлениеПоискомКонтекстноеМеню" id="207"/>
+												<ExtendedTooltip name="СкладыКонтрагентовУправлениеПоискомРасширеннаяПодсказка" id="208"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="СкладыОтправителяНомерСтроки" id="209">
+													<DataPath>Объект.СкладыКонтрагентов.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СкладыОтправителяНомерСтрокиКонтекстноеМеню" id="210"/>
+													<ExtendedTooltip name="СкладыОтправителяНомерСтрокиРасширеннаяПодсказка" id="211"/>
+												</LabelField>
+												<InputField name="СкладыОтправителяСкладОтправителя" id="212">
+													<DataPath>Объект.СкладыКонтрагентов.Склад</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СкладыОтправителяСкладОтправителяКонтекстноеМеню" id="213"/>
+													<ExtendedTooltip name="СкладыОтправителяСкладОтправителяРасширеннаяПодсказка" id="214"/>
+												</InputField>
+												<CheckBoxField name="СкладыКонтрагентовСкладОтправитель" id="236">
+													<DataPath>Объект.СкладыКонтрагентов.Склад.Отправитель</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СкладыКонтрагентовСкладОтправительКонтекстноеМеню" id="237"/>
+													<ExtendedTooltip name="СкладыКонтрагентовСкладОтправительРасширеннаяПодсказка" id="238"/>
+												</CheckBoxField>
+												<CheckBoxField name="СкладыКонтрагентовСкладПолучатель" id="239">
+													<DataPath>Объект.СкладыКонтрагентов.Склад.Получатель</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СкладыКонтрагентовСкладПолучательКонтекстноеМеню" id="240"/>
+													<ExtendedTooltip name="СкладыКонтрагентовСкладПолучательРасширеннаяПодсказка" id="241"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГрКонтрагенты" id="215">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагенты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Контрагенты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleDataPath>Объект.Контрагенты.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГрКонтрагентыРасширеннаяПодсказка" id="216"/>
+									<ChildItems>
+										<Table name="Контрагенты" id="217">
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.Контрагенты</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="КонтрагентыКонтекстноеМеню" id="218"/>
+											<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="219">
+												<ChildItems>
+													<Button name="КонтрагентыСкопироватьКонтрагентов" id="270">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СкопироватьКонтрагентов</CommandName>
+														<ExtendedTooltip name="КонтрагентыСкопироватьКонтрагентовРасширеннаяПодсказка" id="271"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="220"/>
+											<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="221">
+												<AdditionSource>
+													<Item>Контрагенты</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="222"/>
+												<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="223"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="224">
+												<AdditionSource>
+													<Item>Контрагенты</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="225"/>
+												<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="226"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="227">
+												<AdditionSource>
+													<Item>Контрагенты</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="228"/>
+												<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="229"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="Контрагенты1НомерСтроки" id="230">
+													<DataPath>Объект.Контрагенты.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="Контрагенты1НомерСтрокиКонтекстноеМеню" id="231"/>
+													<ExtendedTooltip name="Контрагенты1НомерСтрокиРасширеннаяПодсказка" id="232"/>
+												</LabelField>
+												<InputField name="Контрагенты1Группа" id="233">
+													<DataPath>Объект.Контрагенты.Группа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="Контрагенты1ГруппаКонтекстноеМеню" id="234"/>
+													<ExtendedTooltip name="Контрагенты1ГруппаРасширеннаяПодсказка" id="235"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+										<InputField name="ВариантДоступаККонтрагентам" id="327">
+											<DataPath>Объект.ВариантДоступаККонтрагентам</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вариант доступа</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ВариантДоступаККонтрагентамКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ВариантДоступаККонтрагентамРасширеннаяПодсказка" id="329"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="ГрДокументы" id="345">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр документы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГрДокументыРасширеннаяПодсказка" id="346"/>
+									<ChildItems>
+										<InputField name="ГраницаПросмотра" id="347">
+											<DataPath>Объект.ГраницаПросмотра</DataPath>
+											<ContextMenu name="ГраницаПросмотраКонтекстноеМеню" id="348"/>
+											<ExtendedTooltip name="ГраницаПросмотраРасширеннаяПодсказка" id="349"/>
+										</InputField>
+										<CheckBoxField name="УстанавливатьОкончательноВПриходныхНакладных" id="353">
+											<DataPath>Объект.УстанавливатьОкончательноВПриходныхНакладных</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УстанавливатьОкончательноВПриходныхНакладныхКонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="УстанавливатьОкончательноВПриходныхНакладныхРасширеннаяПодсказка" id="355"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="ГрСканерШК" id="17">
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.Администратор">true</xr:Value>
+						<xr:Value name="Role.РазрешитьВариантыОтчетов">false</xr:Value>
+						<xr:Value name="Role.РазрешитьНастройкуСписка">false</xr:Value>
+						<xr:Value name="Role.РазрешитьКодыСправочников">false</xr:Value>
+						<xr:Value name="Role.МонопольныйРежим">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаРасходыДоходы">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДвиженияДенег">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеДанныхЗП">false</xr:Value>
+						<xr:Value name="Role.ИзменениеНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.БлокИзмененияНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.ЧтениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.ЧтениеИзменениеНаименованийКонтрагентов">false</xr:Value>
+						<xr:Value name="Role.Сооб_ПользовательСообщений">false</xr:Value>
+						<xr:Value name="Role.Сооб_АдминистраторСообщений">false</xr:Value>
+						<xr:Value name="Role.ЗакупкаПродажаВозврат">false</xr:Value>
+						<xr:Value name="Role.Менеджер">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупкиМинимальный">false</xr:Value>
+						<xr:Value name="Role.ИнвойсЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИнвойсТоварный">false</xr:Value>
+						<xr:Value name="Role.Логистика">false</xr:Value>
+						<xr:Value name="Role.Бухгалтерия">false</xr:Value>
+						<xr:Value name="Role.Зарплата">false</xr:Value>
+						<xr:Value name="Role.Телеграм">false</xr:Value>
+						<xr:Value name="Role.СверкаСПоставщиками">false</xr:Value>
+						<xr:Value name="Role.МетреонПолный">false</xr:Value>
+						<xr:Value name="Role.МетреонМенеджер">false</xr:Value>
+						<xr:Value name="Role.МетреонПеремещение">false</xr:Value>
+						<xr:Value name="Role.МетреонЛогистика">false</xr:Value>
+						<xr:Value name="Role.МетреонСклад">false</xr:Value>
+						<xr:Value name="Role.УстановкаЦенПродажи">false</xr:Value>
+						<xr:Value name="Role.ВозвратПоставщикам">false</xr:Value>
+						<xr:Value name="Role.ВозвратОтПокупателей">false</xr:Value>
+						<xr:Value name="Role.ВидимостьЦенЗакупки">false</xr:Value>
+						<xr:Value name="Role.ИзменениеВесаНоменклатуры">false</xr:Value>
+						<xr:Value name="Role.Разработка">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПродажиПоПериодам">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарь">false</xr:Value>
+						<xr:Value name="Role.ПросмотрОтчетаПлатежныйКалендарьЗакупки">false</xr:Value>
+						<xr:Value name="Role.ПросмотрДокументаОтправка">false</xr:Value>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сканер ШК</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сканер ШК</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГрСканерШКРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="37">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="38"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьСканерШК" id="34">
+									<DataPath>Объект.ИспользоватьСканерШК</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСканерШККонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ИспользоватьСканерШКРасширеннаяПодсказка" id="36"/>
+								</CheckBoxField>
+								<Button name="Версия" id="39">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Версия</CommandName>
+									<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="40"/>
+								</Button>
+								<Button name="Тест" id="41">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Тест</CommandName>
+									<ExtendedTooltip name="ТестРасширеннаяПодсказка" id="42"/>
+								</Button>
+								<Button name="Настройка" id="43">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.Настройка</CommandName>
+									<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="44"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Порт" id="19">
+							<DataPath>Объект.Порт</DataPath>
+							<ContextMenu name="ПортКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="Скорость" id="22">
+							<DataPath>Объект.Скорость</DataPath>
+							<ContextMenu name="СкоростьКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СкоростьРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="БитДанных" id="25">
+							<DataPath>Объект.БитДанных</DataPath>
+							<ContextMenu name="БитДанныхКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="БитДанныхРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="СтопСимвол" id="28">
+							<DataPath>Объект.СтопСимвол</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="СтопСимволКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СтопСимволРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="СообщатьСобытияШК" id="31">
+							<DataPath>Объект.СообщатьСобытияШК</DataPath>
+							<ContextMenu name="СообщатьСобытияШККонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СообщатьСобытияШКРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<CheckBoxField name="КлавиатурныйСканерШК" id="45">
+							<DataPath>Объект.КлавиатурныйСканерШК</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КлавиатурныйСканерШККонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="КлавиатурныйСканерШКРасширеннаяПодсказка" id="47"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Пользователи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБЗапрещеноИзменятьПароль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователю запрещено изменять пароль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Користувачеві заборонено змінювати пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБПоказыватьВСпискеВыбора" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать в списке выбора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показувати в списку вибору</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБЯзык" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык интерфейса
+программы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Мова інтерфейсу
+програми</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РолиПользователя" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБСтарыйПароль" id="12">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПользовательИБПароль" id="13">
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательИБПарольУстановлен" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь ИБПароль установлен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольИзменен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Версия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия драйвера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Версия</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Тест" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест сканера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Тест</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Настройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СменитьПароль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить пароль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Change password</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СменитьПароль</Action>
+		</Command>
+		<Command name="ВключитьРоли" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить роли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Включити ролі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить роли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Включити ролі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВключитьРоли</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсключитьРоли" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить роли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виключити ролі</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить роли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Виключити ролі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсключитьРоли</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьТолькоВыбранныеРоли" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только выбранные</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Тільки обрані</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать только выбранные роли</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Показати тільки обрані ролі</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПоказатьТолькоВыбранныеРоли</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьТолькоВыбранныеРоли</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкопироватьСкладыПользователя" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать склады другого пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать склады пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьСкладыПользователя</Action>
+		</Command>
+		<Command name="СкопироватьСкладыКонтрагентов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать склады контрагентов другого пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать склады контрагентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьСкладыКонтрагентов</Action>
+		</Command>
+		<Command name="СкопироватьКонтрагентов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать контрагентов другого пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать контрагентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьКонтрагентов</Action>
+			<AssociatedTableElementId xsi:type="xs:string">Контрагенты</AssociatedTableElementId>
+		</Command>
+		<Command name="СкопироватьДенежныеСчета" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать денежные счета другого пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать денежные счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьДенежныеСчета</Action>
+		</Command>
+		<Command name="СкопироватьОграниченияПоСкладам" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать ограничения по складам другого пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать ограничения по складам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьОграниченияПоСкладам</Action>
+		</Command>
+		<Command name="СоздатьПользователяИБ" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать пользователя ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать пользователя ИБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьПользователяИБ</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СкопироватьРоли" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать 
+роли</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать роли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Back</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьРоли</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

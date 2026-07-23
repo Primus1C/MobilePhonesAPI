@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Report uuid="97a96154-64a1-4ae1-9d90-5b4c3c010dc9">
+		<InternalInfo>
+			<xr:GeneratedType name="ReportObject.КонсольЗапросов_82" category="Object">
+				<xr:TypeId>ac8367b3-17ce-40cc-9a4a-e6f2f0c58fcb</xr:TypeId>
+				<xr:ValueId>72d93448-5378-4933-be8c-b2a8e91d7b4e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ReportManager.КонсольЗапросов_82" category="Manager">
+				<xr:TypeId>fae7f243-29b1-4dca-8d0d-b79705365cb4</xr:TypeId>
+				<xr:ValueId>4a3e1eb9-61ae-4478-8f2a-44f82b94e9d4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КонсольЗапросов_82</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль запросов 8.2</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Консоль повторяет интерфейс и основные возможности Консоли запросов 8.1, а также позволяет получать результаты пакетных запросов и временных таблиц</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>Report.КонсольЗапросов_82.Form.Форма</DefaultForm>
+			<AuxiliaryForm>Report.КонсольЗапросов_82.Form.Форма</AuxiliaryForm>
+			<MainDataCompositionSchema/>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+			<Form>ФормаВложеннойТаблицы</Form>
+			<Form>ФормаОсобогоТипа</Form>
+			<Template>МакетРезультата</Template>
+			<Command uuid="9c1dcdd5-a481-4a49-b359-5a91faab1292">
+				<Properties>
+					<Name>КонсольЗапросов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Консоль запросов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>ActionsPanelTools</Group>
+					<CommandParameterType/>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Report>
+</MetaDataObject>

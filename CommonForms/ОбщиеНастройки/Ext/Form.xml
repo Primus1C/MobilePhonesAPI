@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="Группа1" id="7">
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="Общее" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Parameters</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОбщееРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="Настройка" id="1">
+							<DataPath>НаборКонстант.Настройка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Идентификатор" id="4">
+							<DataPath>НаборКонстант.Идентификатор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИдентификаторКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="БазоваяВалюта" id="38">
+							<DataPath>НаборКонстант.БазоваяВалюта</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="БазоваяВалютаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="БазоваяВалютаРасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<InputField name="ВалютаУстановкиЦенПродажи" id="41">
+							<DataPath>НаборКонстант.ВалютаУстановкиЦенПродажи</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ВалютаУстановкиЦенПродажиКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ВалютаУстановкиЦенПродажиРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<UsualGroup name="ГруппаНоменклатура" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номенклатура</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа номенклатура</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаНоменклатураРасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="УслугаДоставки" id="44">
+									<DataPath>НаборКонстант.НоменклатураУслугаДоставки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Услуга доставки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="УслугаДоставкиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="УслугаДоставкиРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="НоменклатураСкидка" id="47">
+									<DataPath>НаборКонстант.НоменклатураСкидка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скидка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НоменклатураСкидкаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="НоменклатураСкидкаРасширеннаяПодсказка" id="49"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<PictureDecoration name="Декорация1" id="30">
+							<Height>2</Height>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="32"/>
+						</PictureDecoration>
+						<Button name="ОбщаяКомандаНастройкиСообщений" id="28">
+							<Type>Hyperlink</Type>
+							<CommandName>CommonCommand.НастройкиСообщений</CommandName>
+							<ExtendedTooltip name="ОбщаяКомандаНастройкиСообщенийРасширеннаяПодсказка" id="29"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="Файлы" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Attach</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="МестоХраненияФайлов" id="11">
+							<DataPath>НаборКонстант.МестоХраненияФайлов</DataPath>
+							<ContextMenu name="МестоХраненияФайловКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="МестоХраненияФайловРасширеннаяПодсказка" id="13"/>
+						</InputField>
+						<InputField name="КаталогФайлов" id="14">
+							<DataPath>НаборКонстант.КаталогФайлов</DataPath>
+							<ContextMenu name="КаталогФайловКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="КаталогФайловРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<CheckBoxField name="ИспользоватьСжатие" id="17">
+							<DataPath>НаборКонстант.ИспользоватьСжатие</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСжатиеКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ИспользоватьСжатиеРасширеннаяПодсказка" id="19"/>
+						</CheckBoxField>
+						<InputField name="МетодСжатия" id="22">
+							<DataPath>НаборКонстант.МетодСжатия</DataPath>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="МетодСжатияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="МетодСжатияРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<UsualGroup name="Группа2" id="33">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<InputField name="МаксРазмерФайлаДляИБ" id="25">
+									<DataPath>НаборКонстант.МаксРазмерФайлаДляИБ</DataPath>
+									<ContextMenu name="МаксРазмерФайлаДляИБКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="МаксРазмерФайлаДляИБРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияБайт" id="35">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>байт</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияБайтКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДекорацияБайтРасширеннаяПодсказка" id="37"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ИнтеграцияТлг" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интеграция Telegram</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.SendMessage</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ИнтеграцияТлгРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУведомления" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Telegram уведомления</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаУведомленияРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация2" id="71">
+									<Picture>
+										<xr:Ref>StdPicture.SendMessage</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="73"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа4" id="74">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="75"/>
+									<ChildItems>
+										<InputField name="ТокенЧатаТреков" id="65">
+											<DataPath>НаборКонстант.ТокенЧатаТреков</DataPath>
+											<ContextMenu name="ТокенЧатаТрековКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ТокенЧатаТрековРасширеннаяПодсказка" id="67"/>
+										</InputField>
+										<InputField name="ИдЧатаТреков" id="62">
+											<DataPath>НаборКонстант.ИдЧатаТреков</DataPath>
+											<ContextMenu name="ИдЧатаТрековКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ИдЧатаТрековРасширеннаяПодсказка" id="64"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАпиПеревозчиков" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>API перевозчиков</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаАпиПеревозчиковРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДХЛ" id="58">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>DHL</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаДХЛРасширеннаяПодсказка" id="59"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация3" id="76">
+											<Width>3</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.DHL</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="78"/>
+										</PictureDecoration>
+										<InputField name="ТокенДХЛ" id="68">
+											<DataPath>НаборКонстант.ТокенДХЛ</DataPath>
+											<ContextMenu name="ТокенДХЛКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ТокенДХЛРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<Button name="ПроветитьТрекиДХЛ" id="79">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПроверитьТрекиДХЛ</CommandName>
+											<ExtendedTooltip name="ПроветитьТрекиДХЛРасширеннаяПодсказка" id="80"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа3" id="60">
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="61"/>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаAPI" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интеграция API</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.GotoExternalURL</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаAPIРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<InputField name="ПериодичностьОповещенийИнтеграции" id="83">
+							<DataPath>НаборКонстант.ПериодичностьОповещенийИнтеграции</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периодичност веб-хуков, сек</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ПериодичностьОповещенийИнтеграцииКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ПериодичностьОповещенийИнтеграцииРасширеннаяПодсказка" id="85"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.БазоваяВалюта</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьТрекиДХЛ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить треки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить треки ДХЛ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьТрекиДХЛ</Action>
+		</Command>
+	</Commands>
+</Form>

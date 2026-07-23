@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="32">
+			<DataPath>Объект.Parent</DataPath>
+			<ContextMenu name="РодительКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Префикс" id="10">
+			<DataPath>Объект.Префикс</DataPath>
+			<ContextMenu name="ПрефиксКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="РеквизитыДляПечати" id="16">
+			<DataPath>Объект.РеквизитыДляПечати</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ContextMenu name="РеквизитыДляПечатиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="РеквизитыДляПечатиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<UsualGroup name="ГруппаПлатежныйКалендарь" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежный календарь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа платежный календарь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПлатежныйКалендарьРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<CheckBoxField name="ВключатьВПлатежныйКалендарь" id="19">
+					<DataPath>Объект.ВключатьВПлатежныйКалендарь</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключатьВПлатежныйКалендарьКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВключатьВПлатежныйКалендарьРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТранзитнаяКасса" id="13">
+					<DataPath>Объект.ТранзитнаяКасса</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТранзитнаяКассаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТранзитнаяКассаРасширеннаяПодсказка" id="15"/>
+				</CheckBoxField>
+				<InputField name="Офис" id="24">
+					<DataPath>Объект.Офис</DataPath>
+					<ContextMenu name="ОфисКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ОфисРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчет" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedTooltip name="ГруппаУчетРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="ВестиПартионныйУчет" id="29">
+					<DataPath>Объект.ВестиПартионныйУчет</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если есть проведенные документы по текущему счету, изменение признака партионного учета запрещено</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВестиПартионныйУчетКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВестиПартионныйУчетРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="НачалоПартионногоУчета" id="35">
+					<DataPath>Объект.НачалоПартионногоУчета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с даты</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>from date</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачалоПартионногоУчетаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="НачалоПартионногоУчетаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДенежныеСчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

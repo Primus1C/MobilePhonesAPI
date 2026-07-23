@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.18">
+	<Item id="b167e6ae-0d4d-4534-9122-9cde04b00261">
+		<Name>AirPods</Name>
+		<Code/>
+		<Description>AirPods</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9d2eed1a-c168-45d7-a447-14e9bd4e9a75">
+		<Name>ApplePencils</Name>
+		<Code/>
+		<Description>Apple pencils</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="acbac1ab-005c-4331-bef6-46800615f614">
+		<Name>AW</Name>
+		<Code/>
+		<Description>AW</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bdc7ef3d-c821-4e82-8805-79c19bf31065">
+		<Name>iPads</Name>
+		<Code/>
+		<Description>iPads</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c144305f-e26c-48fc-8dd2-ddf0e639d233">
+		<Name>iPhones</Name>
+		<Code/>
+		<Description>iPhones</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="abb538ee-129b-4da2-9aa2-32640502afbd">
+		<Name>Keyboards</Name>
+		<Code/>
+		<Description>Keyboards</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d684c1b7-eff7-4a36-b9df-a359090ec423">
+		<Name>MagicMouse</Name>
+		<Code/>
+		<Description>Magic Mouse</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7e351625-f808-4b1c-930d-bcb000ebd1f6">
+		<Name>МобильныеУстройства</Name>
+		<Code/>
+		<Description>Мобильные устройства</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

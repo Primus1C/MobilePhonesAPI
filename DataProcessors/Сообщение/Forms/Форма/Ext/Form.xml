@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<Group>HorizontalIfPossible</Group>
+	<HorizontalAlign>Center</HorizontalAlign>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ДекорацияКартинка" id="7">
+			<Width>60</Width>
+			<Height>3</Height>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация картинка</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<PictureSize>AutoSize</PictureSize>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаСообщения</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ДекорацияКартинкаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДекорацияКартинкаРасширеннаяПодсказка" id="9"/>
+		</PictureDecoration>
+		<LabelDecoration name="ДекорацияСообщение" id="15">
+			<Width>60</Width>
+			<VerticalStretch>true</VerticalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация сообщение
+&lt;link e1cib/data/Документ._Инвойс?ref=8120000c29bf43ba11e85055664148c5&gt;e1cib/data/Документ._Инвойс?ref=8120000c29bf43ba11e85055664148c5
+&lt;img 0:3533ed01-ab74-40cd-9fb5-d11ebbad8376/&gt;&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="ДекорацияСообщениеКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ДекорацияСообщениеРасширеннаяПодсказка" id="17"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияСообщениеОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<LabelField name="ФорматированноеСообщение" id="12">
+			<DataPath>Объект.ФорматированноеСообщение</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Width>60</Width>
+			<VerticalStretch>true</VerticalStretch>
+			<ContextMenu name="ФорматированноеСообщениеКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ФорматированноеСообщениеРасширеннаяПодсказка" id="14"/>
+			<Events>
+				<Event name="URLProcessing">ФорматированноеСообщениеОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Сообщение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

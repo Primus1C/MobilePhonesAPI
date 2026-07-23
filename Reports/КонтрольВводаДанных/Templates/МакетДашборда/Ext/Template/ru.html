@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta charset="UTF-8" http-equiv="content-type" content="text/html;charset=utf-8"></meta><meta http-equiv="X-UA-Compatible" content="IE=edge"></meta><style>
+        body { font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; background-color: #f4f7f9; margin: 0; padding: 4px; overflow-x: auto; min-height: 100vh; display: flex; align-items: center; }
+        .dashboard-container { display: flex; flex-direction: row; justify-content: space-between; width: 100%; min-width: 1000px; }
+        .gauge-card { background: #ffffff; padding: 4px 4px; margin: 0 5px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); flex: 1; display: flex; justify-content: center; align-items: center; }
+        .svg-container { width: 100%; max-width: 240px; }
+        svg { width: 100%; height: auto; overflow: visible; }
+        .rings-group { transform: rotate(-90deg); transform-origin: 150px 150px; }
+        .track-bg { fill: none; stroke-width: 12; stroke-linecap: round; }
+        .track-data { fill: none; stroke-width: 12; stroke-linecap: round; transition: stroke-dasharray 1.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .ring-label { font-size: 11px; font-weight: 600; }
+        .ring-val { font-size: 11px; font-weight: normal; opacity: 0.8; }
+        .center-value { font-size: 28px; font-weight: bold; }
+        .center-text { font-size: 14px; font-weight: 500; }
+    </style></head><body>
+
+<div class="dashboard-container">
+    
+<div class="gauge-card">
+<div class="svg-container" id="gauge-1"></div></div>
+    
+<div class="gauge-card">
+<div class="svg-container" id="gauge-2"></div></div>
+    
+<div class="gauge-card">
+<div class="svg-container" id="gauge-3"></div></div>
+    
+<div class="gauge-card">
+<div class="svg-container" id="gauge-4"></div></div>
+    
+<div class="gauge-card">
+<div class="svg-container" id="gauge-5"></div></div>
+</div>
+
+<script>
+    var size = 300, center = 150, baseRadius = 125, trackWidth = 12, trackGap = 6, maxScale = 100;
+    var ringColors = [
+        { color: '#e53e3e', bgColor: '#fed7d7' }, 
+        { color: '#38a169', bgColor: '#c6f6d5' }, 
+        { color: '#3182ce', bgColor: '#bee3f8' }, 
+        { color: '#d69e2e', bgColor: '#fef08a' }  
+    ];
+
+    // Функция теперь принимает параметры d1, d2, d3, d4 для отображаемого текста
+    function UpdateIndicator(indIndex, n1, v1, d1, n2, v2, d2, n3, v3, d3, n4, v4, d4, tName, tVal, tNameColor, tValColor) {
+        var items = [];
+        // Сохраняем новое свойство display
+        if (n1 && v1 !== "") items.push({ name: n1, val: Number(v1), display: d1, color: ringColors[0].color, bgColor: ringColors[0].bgColor });
+        if (n2 && v2 !== "") items.push({ name: n2, val: Number(v2), display: d2, color: ringColors[1].color, bgColor: ringColors[1].bgColor });
+        if (n3 && v3 !== "") items.push({ name: n3, val: Number(v3), display: d3, color: ringColors[2].color, bgColor: ringColors[2].bgColor });
+        if (n4 && v4 !== "") items.push({ name: n4, val: Number(v4), display: d4, color: ringColors[3].color, bgColor: ringColors[3].bgColor });
+
+        var cNameColor = tNameColor || '#a0aec0', cValColor = tValColor || '#2d3748', cName = tName || '', cVal = tVal || '';
+        var svgHTML = '<svg viewBox="0 0 ' + size + ' ' + size + '"><g class="rings-group">';
+        var labelsHTML = '<g class="labels-group">';
+
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i], r = baseRadius - (i * (trackWidth + trackGap)), circ = 2 * Math.PI * r;
+            var trackLength = circ * 0.75, gapLength = circ * 0.25;
+            var targetDash = (Math.min(item.val, maxScale) / maxScale) * trackLength;
+
+            svgHTML += '<circle class="track-bg" cx="' + center + '" cy="' + center + '" r="' + r + '" stroke="' + item.bgColor + '" stroke-dasharray="' + trackLength + ' ' + gapLength + '" />';
+            svgHTML += '<circle class="track-data" cx="' + center + '" cy="' + center + '" r="' + r + '" stroke="' + item.color + '" stroke-dasharray="0 ' + circ + '" data-target="' + targetDash + '" data-circ="' + circ + '" />';
+            
+            // Выводим item.display вместо item.val
+            labelsHTML += '<text x="' + (center - 10) + '" y="' + (center - r + 4) + '" text-anchor="end" class="ring-label" fill="' + item.color + '">' + item.name + ' <tspan class="ring-val">' + item.display + '</tspan></text>';
+        }
+
+        svgHTML += '</g>' + labelsHTML + '</g>';
+        svgHTML += '<text x="' + center + '" y="' + (center + 5) + '" text-anchor="middle" class="center-value" fill="' + cValColor + '">' + cVal + '</text>';
+        svgHTML += '<text x="' + center + '" y="' + (center + 25) + '" text-anchor="middle" class="center-text" fill="' + cNameColor + '">' + cName + '</text></svg>';
+
+        var container = document.getElementById('gauge-' + indIndex);
+        if(container) {
+            container.innerHTML = svgHTML;
+            container.getBoundingClientRect(); 
+            var tracks = container.querySelectorAll('.track-data');
+            setTimeout(function() {
+                for (var j = 0; j < tracks.length; j++) {
+                    tracks[j].setAttribute('stroke-dasharray', tracks[j].getAttribute('data-target') + ' ' + tracks[j].getAttribute('data-circ'));
+                }
+            }, 50);
+        }
+    }
+
+    window.onload = function() {
+        // %ВСТАВКА_ВЫЗОВОВ_ИЗ_1С%
+    };
+</script></body></html>

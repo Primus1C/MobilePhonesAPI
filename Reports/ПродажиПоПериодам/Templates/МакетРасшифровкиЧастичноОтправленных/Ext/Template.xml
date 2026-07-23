@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказано</dataPath>
+			<field>Заказано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставка</dataPath>
+			<field>Поставка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инвойс</dataPath>
+			<field>Инвойс</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Прибыло</dataPath>
+			<field>Прибыло</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибыло</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВПути</dataPath>
+			<field>ВПути</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В пути</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	_ИнвойсПоставки.Ссылка КАК Инвойс,
+	_ИнвойсПоставки.Поставка КАК Поставка
+ПОМЕСТИТЬ ЧастичноПрибывшие
+ИЗ
+	Документ._Инвойс.Поставки КАК _ИнвойсПоставки
+ГДЕ
+	_ИнвойсПоставки.Ссылка В
+			(ВЫБРАТЬ
+				СостоянияИнвойсов.Инвойс
+			ИЗ
+				РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
+			ГДЕ
+				СостоянияИнвойсов.Инвойс.Проведен
+				И СостоянияИнвойсов.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыИнвойса.ЧастичноПрибыл))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НеОтправлено.Инвойс КАК Инвойс,
+	НеОтправлено.Поставка КАК Поставка
+ПОМЕСТИТЬ НеОтправлено_Из_ЧастичноПрибывших
+ИЗ
+	(ВЫБРАТЬ
+		ОтправкаИнвойсовНЕОТПРАВЛЕНО.Инвойс КАК Инвойс,
+		ОтправкаИнвойсовНЕОТПРАВЛЕНО.Поставка КАК Поставка,
+		СУММА(ОтправкаИнвойсовНЕОТПРАВЛЕНО.ОжидаемыеПоставки) КАК ОжидаемыеПоставки
+	ИЗ
+		РегистрНакопления.ОтправкаИнвойсов КАК ОтправкаИнвойсовНЕОТПРАВЛЕНО
+	ГДЕ
+		(ОтправкаИнвойсовНЕОТПРАВЛЕНО.Инвойс, ОтправкаИнвойсовНЕОТПРАВЛЕНО.Поставка) В
+				(ВЫБРАТЬ
+					ЧастичноПрибывшие.Инвойс,
+					ЧастичноПрибывшие.Поставка
+				ИЗ
+					ЧастичноПрибывшие)
+	
+	СГРУППИРОВАТЬ ПО
+		ОтправкаИнвойсовНЕОТПРАВЛЕНО.Инвойс,
+		ОтправкаИнвойсовНЕОТПРАВЛЕНО.Поставка) КАК НеОтправлено
+ГДЕ
+	НеОтправлено.ОжидаемыеПоставки &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ОприходованиеНоменклатуры.Документ КАК Инвойс,
+	ОприходованиеНоменклатуры.Поставка КАК Поставка
+ПОМЕСТИТЬ Оприходованные_Из_ЧастичноПрибывших
+ИЗ
+	РегистрНакопления.ВКД_ОприходованиеНоменклатуры КАК ОприходованиеНоменклатуры
+ГДЕ
+	ОприходованиеНоменклатуры.Регистратор ССЫЛКА Документ.ПриходнаяНакладная
+	И ОприходованиеНоменклатуры.Документ В
+			(ВЫБРАТЬ
+				ЧастичноПрибывшие.Инвойс
+			ИЗ
+				ЧастичноПрибывшие)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ИнвойсПоставки.Ссылка КАК Инвойс,
+	ИнвойсПоставки.Поставка КАК Поставка
+ПОМЕСТИТЬ ОтправленоНеПрибыло_Из_ЧастичноПрибывших
+ИЗ
+	Документ._Инвойс.Поставки КАК ИнвойсПоставки
+ГДЕ
+	ИнвойсПоставки.Ссылка В
+			(ВЫБРАТЬ
+				ЧастичноПрибывшие.Инвойс
+			ИЗ
+				ЧастичноПрибывшие)
+	И НЕ (ИнвойсПоставки.Ссылка, ИнвойсПоставки.Поставка) В
+				(ВЫБРАТЬ
+					НеОтправлено_Из_ЧастичноПрибывших.Инвойс,
+					НеОтправлено_Из_ЧастичноПрибывших.Поставка
+				ИЗ
+					НеОтправлено_Из_ЧастичноПрибывших)
+	И НЕ (ИнвойсПоставки.Ссылка, ИнвойсПоставки.Поставка) В
+				(ВЫБРАТЬ
+					Оприходованные_Из_ЧастичноПрибывших.Инвойс,
+					Оприходованные_Из_ЧастичноПрибывших.Поставка
+				ИЗ
+					Оприходованные_Из_ЧастичноПрибывших)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Свод.Номенклатура КАК Номенклатура,
+	Свод.Инвойс КАК Инвойс,
+	Свод.Поставка КАК Поставка,
+	СУММА(Свод.ВПути) КАК ВПути,
+	СУММА(Свод.Заказано) КАК Заказано,
+	СУММА(Свод.Прибыло) КАК Прибыло
+ИЗ
+	(ВЫБРАТЬ
+		ИнвойсТоварыВПути.Номенклатура КАК Номенклатура,
+		ИнвойсТоварыВПути.Ссылка КАК Инвойс,
+		"инвойс полностью" КАК Поставка,
+		ИнвойсТоварыВПути.Количество КАК ВПути,
+		0 КАК Заказано,
+		0 КАК Прибыло
+	ИЗ
+		(ВЫБРАТЬ
+			СостоянияИнвойсов.Инвойс КАК Инвойс
+		ИЗ
+			РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
+		ГДЕ
+			СостоянияИнвойсов.Инвойс.Проведен
+			И СостоянияИнвойсов.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыИнвойса.ВПути)) КАК СостоянияИнвойсов
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ._Инвойс.ВКД_Товары КАК ИнвойсТоварыВПути
+			ПО СостоянияИнвойсов.Инвойс = ИнвойсТоварыВПути.Ссылка
+	
+	ОБЪЕДИНИТЬ
+	
+	ВЫБРАТЬ
+		ИнвойсТоварыЗаказано.Номенклатура,
+		СостоянияИнвойсов.Инвойс,
+		"инвойс полностью",
+		0,
+		ИнвойсТоварыЗаказано.Количество,
+		0
+	ИЗ
+		(ВЫБРАТЬ
+			СостоянияИнвойсов.Инвойс КАК Инвойс
+		ИЗ
+			РегистрСведений.СостоянияИнвойсов КАК СостоянияИнвойсов
+		ГДЕ
+			СостоянияИнвойсов.Инвойс.Проведен
+			И СостоянияИнвойсов.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыИнвойса.Прибыл)
+			И СостоянияИнвойсов.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыИнвойса.ЧастичноПрибыл)) КАК СостоянияИнвойсов
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ._Инвойс.ВКД_Товары КАК ИнвойсТоварыЗаказано
+			ПО СостоянияИнвойсов.Инвойс = ИнвойсТоварыЗаказано.Ссылка
+	
+	ОБЪЕДИНИТЬ
+	
+	ВЫБРАТЬ
+		ОприходованиеНоменклатуры.Номенклатура,
+		ОприходованиеНоменклатуры.Документ,
+		ОприходованиеНоменклатуры.Поставка,
+		0,
+		ОприходованиеНоменклатуры.КоличествоОстаток,
+		0
+	ИЗ
+		РегистрНакопления.ВКД_ОприходованиеНоменклатуры.Остатки КАК ОприходованиеНоменклатуры
+	ГДЕ
+		(ОприходованиеНоменклатуры.Документ, ОприходованиеНоменклатуры.Поставка) В
+				(ВЫБРАТЬ
+					НеОтправлено_Из_ЧастичноПрибывших.Инвойс,
+					НеОтправлено_Из_ЧастичноПрибывших.Поставка
+				ИЗ
+					НеОтправлено_Из_ЧастичноПрибывших)
+	
+	ОБЪЕДИНИТЬ
+	
+	ВЫБРАТЬ
+		ОприходованиеНоменклатуры.Номенклатура,
+		ОприходованиеНоменклатуры.Документ,
+		ОприходованиеНоменклатуры.Поставка,
+		0,
+		0,
+		-ОприходованиеНоменклатуры.КоличествоОстаток
+	ИЗ
+		РегистрНакопления.ВКД_ОприходованиеНоменклатуры.Остатки КАК ОприходованиеНоменклатуры
+	ГДЕ
+		(ОприходованиеНоменклатуры.Документ, ОприходованиеНоменклатуры.Поставка) В
+				(ВЫБРАТЬ
+					Оприходованные_Из_ЧастичноПрибывших.Инвойс,
+					Оприходованные_Из_ЧастичноПрибывших.Поставка
+				ИЗ
+					Оприходованные_Из_ЧастичноПрибывших)
+	
+	ОБЪЕДИНИТЬ
+	
+	ВЫБРАТЬ
+		ОприходованиеНоменклатуры.Номенклатура,
+		ОприходованиеНоменклатуры.Документ,
+		ОприходованиеНоменклатуры.Поставка,
+		ОприходованиеНоменклатуры.КоличествоОстаток,
+		0,
+		0
+	ИЗ
+		РегистрНакопления.ВКД_ОприходованиеНоменклатуры.Остатки КАК ОприходованиеНоменклатуры
+	ГДЕ
+		(ОприходованиеНоменклатуры.Документ, ОприходованиеНоменклатуры.Поставка) В
+				(ВЫБРАТЬ
+					ОтправленоНеПрибыло_Из_ЧастичноПрибывших.Инвойс,
+					ОтправленоНеПрибыло_Из_ЧастичноПрибывших.Поставка
+				ИЗ
+					ОтправленоНеПрибыло_Из_ЧастичноПрибывших)) КАК Свод
+ГДЕ
+	Свод.Номенклатура = &amp;Номенклатура
+
+СГРУППИРОВАТЬ ПО
+	Свод.Номенклатура,
+	Свод.Инвойс,
+	Свод.Поставка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВПути</dataPath>
+		<expression>Сумма(ВПути)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Заказано</dataPath>
+		<expression>Сумма(Заказано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Прибыло</dataPath>
+		<expression>Сумма(Прибыло)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Номенклатура</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Номенклатура</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Прибыло</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВПути</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказано</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Инвойс</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Поставка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Инвойс</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Поставка</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

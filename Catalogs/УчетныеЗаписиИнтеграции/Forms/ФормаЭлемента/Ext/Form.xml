@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТоп" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа топ</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТопРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<CheckBoxField name="Активный" id="16">
+					<DataPath>Объект.Активен</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивныйКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="АктивныйРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="Администратор" id="79">
+					<DataPath>Объект.Администратор</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступны данные (справочники, документы) всех учетных записей интеграции</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АдминистраторКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="АдминистраторРасширеннаяПодсказка" id="81"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ГруппаВнутреннихКлиентов" id="53">
+			<DataPath>Объект.ГруппаКонтрагентов</DataPath>
+			<ContextMenu name="ГруппаВнутреннихКлиентовКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ГруппаВнутреннихКлиентовРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<UsualGroup name="ГруппаТокен" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа токен</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТокенРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="ТокенАвторизации" id="10">
+					<DataPath>Объект.ТокенАвторизации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТокенАвторизацииКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТокенАвторизацииРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<Button name="СгенерироватьТокен" id="43">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СгенерироватьТокен</CommandName>
+					<ExtendedTooltip name="СгенерироватьТокенРасширеннаяПодсказка" id="44"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<UsualGroup name="ГруппаЦены" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цены в заказах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа цены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<ExtendedTooltip name="ГруппаЦеныРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<CheckBoxField name="РазрешитьПревышениеЦен" id="84">
+					<DataPath>Объект.РазрешитьПревышениеЦен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазрешитьПревышениеЦенКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="РазрешитьПревышениеЦенРасширеннаяПодсказка" id="86"/>
+				</CheckBoxField>
+				<InputField name="РазрешитьСнижениеЦенНа" id="87">
+					<DataPath>Объект.РазрешитьСнижениеЦенНа</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Превышение и снижение цен рассчитываются относительно заданных в документах "Установка цен"</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РазрешитьСнижениеЦенНаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="РазрешитьСнижениеЦенНаРасширеннаяПодсказка" id="89"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаWebHook" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Web hooks</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Web hooks</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<ExtendedTooltip name="ГруппаWebHookРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<CheckBoxField name="WebhookАктивен" id="58">
+					<DataPath>Объект.WebhookАктивен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="WebhookАктивенКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="WebhookАктивенРасширеннаяПодсказка" id="60"/>
+					<Events>
+						<Event name="OnChange">WebhookАктивенПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаWebHookПодч" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Web hooks</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Web hooks</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаWebHookПодчРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="WebhookURL" id="61">
+							<DataPath>Объект.WebhookURL</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>URL</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="WebhookURLКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="WebhookURLРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="WebhookToken" id="64">
+							<DataPath>Объект.WebhookToken</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Token</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="WebhookTokenКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="WebhookTokenРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<UsualGroup name="ГруппаWebHookОтправлять" id="75">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа web hook отправлять</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Double</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаWebHookОтправлятьРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<CheckBoxField name="ОтправлятьОстатки" id="67">
+									<DataPath>Объект.ОтправлятьОстатки</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтправлятьОстаткиКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ОтправлятьОстаткиРасширеннаяПодсказка" id="69"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОтправлятьЦены" id="70">
+									<DataPath>Объект.ОтправлятьЦены</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтправлятьЦеныКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ОтправлятьЦеныРасширеннаяПодсказка" id="72"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Склады" id="22">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Склады</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СкладыКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="СкладыКоманднаяПанель" id="24"/>
+			<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="25"/>
+			<SearchStringAddition name="СкладыСтрокаПоиска" id="26">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СкладыСостояниеПросмотра" id="29">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СкладыУправлениеПоиском" id="32">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СкладыНомерСтроки" id="35">
+					<DataPath>Объект.Склады.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<InputField name="СкладыСклад" id="38">
+					<DataPath>Объект.Склады.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладыСкладКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УчетныеЗаписиИнтеграции</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СгенерироватьТокен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать токен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СгенерироватьТокен</Action>
+		</Command>
+	</Commands>
+</Form>

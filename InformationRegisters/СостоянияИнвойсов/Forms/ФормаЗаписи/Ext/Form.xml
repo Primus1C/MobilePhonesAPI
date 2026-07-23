@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Инвойс" id="1">
+			<DataPath>Запись.Инвойс</DataPath>
+			<ContextMenu name="ИнвойсКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИнвойсРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ИнвойсЗакупки" id="4">
+			<DataPath>1/0:908b04fc-8e85-43c0-b82f-6a1e1e50c04c</DataPath>
+			<ContextMenu name="ИнвойсЗакупкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИнвойсЗакупкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="Расхождения" id="7">
+			<DataPath>Запись.Расхождения</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РасхожденияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РасхожденияРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаСтатусы" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа статусы</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтатусыРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="Статус" id="10">
+					<DataPath>Запись.Статус</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="СтатусИнспекции" id="13">
+					<DataPath>Запись.СтатусИнспекции</DataPath>
+					<ContextMenu name="СтатусИнспекцииКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СтатусИнспекцииРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="СтатусОплаты" id="16">
+					<DataPath>Запись.СтатусОплаты</DataPath>
+					<ContextMenu name="СтатусОплатыКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СтатусОплатыРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="СтатусОплатыАвто" id="26">
+					<DataPath>Запись.СтатусОплатыАвто</DataPath>
+					<ContextMenu name="СтатусОплатыАвтоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СтатусОплатыАвтоРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<RadioButtonField name="Состояние" id="23">
+					<DataPath>Запись.Состояние</DataPath>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>проведен</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>не проведен</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>пом.на удаление</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>нет документа</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="25"/>
+				</RadioButtonField>
+				<Button name="УстановитьСтатусыПоУмолчанию" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УстановитьСтатусыПоУмолчанию</CommandName>
+					<ExtendedTooltip name="УстановитьСтатусыПоУмолчаниюРасширеннаяПодсказка" id="22"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОплата" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаОплатаРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="СуммаОплаты" id="29">
+					<DataPath>Запись.СуммаОплаты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаОплатыКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СуммаОплатыРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДатаОплаты" id="32">
+					<DataPath>Запись.ДатаОплаты</DataPath>
+					<ContextMenu name="ДатаОплатыКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДатаОплатыРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="Курс" id="35">
+					<DataPath>Запись.Курс</DataPath>
+					<ContextMenu name="КурсКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="КурсРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СостоянияИнвойсов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьСтатусыПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статусы по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить статусы по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСтатусыПоУмолчанию</Action>
+		</Command>
+	</Commands>
+</Form>

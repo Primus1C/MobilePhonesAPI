@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandsVisibility>
+		<Command name="Catalog.ВидыНоменклатуры.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.КодыПроизводителей.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВидыНоменклатуры.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.КодыПроизводителей.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="1:526a29d2-299a-48a7-a06d-3741dfdbd62f">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Менеджер">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ВесНоменклатуры.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="Catalog.ВидыНоменклатуры.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.КодыПроизводителей.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Производители.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="0:526a29d2-299a-48a7-a06d-3741dfdbd62f">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОборотыСерии">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ГруппыПодбораНоменклатуры.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПричиныВозврата.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.ВесНоменклатуры.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
+</CommandInterface>

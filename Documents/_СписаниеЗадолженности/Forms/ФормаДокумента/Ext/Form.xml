@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Фирма" id="39">
+					<DataPath>Объект.Фирма</DataPath>
+					<ContextMenu name="ФирмаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ФирмаРасширеннаяПодсказка" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Контрагент" id="45">
+			<DataPath>Объект.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="47"/>
+			<Events>
+				<Event name="OnChange">КонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="ТаблицаКорректировки" id="9">
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ТаблицаКорректировки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаКорректировкиКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ТаблицаКорректировкиКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="Заполнить" id="7">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="8"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаКорректировкиРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ТаблицаКорректировкиСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>ТаблицаКорректировки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаКорректировкиСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ТаблицаКорректировкиСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаКорректировкиСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ТаблицаКорректировки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаКорректировкиСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ТаблицаКорректировкиСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаКорректировкиУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>ТаблицаКорректировки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаКорректировкиУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ТаблицаКорректировкиУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТаблицаКорректировкиНомерСтроки" id="22">
+					<DataPath>Объект.ТаблицаКорректировки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаКорректировкиНомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТаблицаКорректировкиНомерСтрокиРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<InputField name="ТаблицаКорректировкиКонтрагент" id="28">
+					<DataPath>Объект.ТаблицаКорректировки.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаКорректировкиКонтрагентКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТаблицаКорректировкиКонтрагентРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ТаблицаКорректировкиДок" id="25">
+					<DataPath>Объект.ТаблицаКорректировки.Док</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаКорректировкиДокКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТаблицаКорректировкиДокРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ТаблицаКорректировкиПредоплатаПокупателя" id="31">
+					<DataPath>Объект.ТаблицаКорректировки.ПредоплатаПокупателя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ТаблицаКорректировки.TotalПредоплатаПокупателя</FooterDataPath>
+					<ContextMenu name="ТаблицаКорректировкиПредоплатаПокупателяКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТаблицаКорректировкиПредоплатаПокупателяРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ТаблицаКорректировкиВалюта" id="42">
+					<DataPath>Объект.ТаблицаКорректировки.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаКорректировкиВалютаКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТаблицаКорректировкиВалютаРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject._СписаниеЗадолженности</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

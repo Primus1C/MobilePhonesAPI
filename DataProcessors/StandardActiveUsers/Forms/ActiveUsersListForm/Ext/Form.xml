@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Активные пользователи</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>SYS</v8:lang>
+			<v8:content>Processing.ActiveUsers</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="стрМонопольныйРежим" id="78">
+			<DataPath>стрМонопольныйРежим</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<TextColor>#FF0000</TextColor>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="стрМонопольныйРежимКонтекстноеМеню" id="79"/>
+			<ExtendedTooltip name="стрМонопольныйРежимРасширеннаяПодсказка" id="80"/>
+		</LabelField>
+		<CommandBar name="MainCommandPanel" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главная командная панель</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.MainCommandBar</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="MainCommandPanelExtendedTooltip" id="42"/>
+			<ChildItems>
+				<Button name="EventsJournal" id="16">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.EventsJournal</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="EventsJournalExtendedTooltip" id="43"/>
+				</Button>
+				<Button name="UserActivity" id="17">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.UserActivity</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="UserActivityExtendedTooltip" id="44"/>
+				</Button>
+				<ButtonGroup name="SearchGroup" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопки поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Search group</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="SearchGroupРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<Button name="Find" id="28">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Item.UsersList.StandardCommand.Find</CommandName>
+							<ExtendedTooltip name="FindExtendedTooltip" id="46"/>
+						</Button>
+						<Button name="CancelFind" id="29">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Item.UsersList.StandardCommand.CancelSearch</CommandName>
+							<ExtendedTooltip name="CancelFindExtendedTooltip" id="47"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<Button name="DoRefresh" id="18">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.DoRefresh</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BackColor>style:ButtonBackColor</BackColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ExtendedTooltip name="DoRefreshExtendedTooltip" id="45"/>
+				</Button>
+				<Button name="SortAsc1" id="30">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.SortAsc</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="SortAsc1ExtendedTooltip" id="48"/>
+				</Button>
+				<Button name="SortDesc1" id="31">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.SortDesc</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="SortDesc1ExtendedTooltip" id="49"/>
+				</Button>
+				<Button name="ShowList" id="32">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Item.UsersList.StandardCommand.OutputList</CommandName>
+					<ExtendedTooltip name="ShowListExtendedTooltip" id="50"/>
+				</Button>
+				<Button name="ChangeForm" id="38">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+					<ExtendedTooltip name="ChangeFormExtendedTooltip" id="51"/>
+				</Button>
+				<Button name="Help" id="39">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="HelpExtendedTooltip" id="52"/>
+				</Button>
+				<Button name="ФормаВключитьМонопольныйРежим" id="81">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВключитьМонопольныйРежим</CommandName>
+					<ExtendedTooltip name="ФормаВключитьМонопольныйРежимРасширеннаяПодсказка" id="82"/>
+				</Button>
+				<Button name="ФормаВыключитьМонопольныйРежим" id="83">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВыключитьМонопольныйРежим</CommandName>
+					<ExtendedTooltip name="ФормаВыключитьМонопольныйРежимРасширеннаяПодсказка" id="84"/>
+				</Button>
+				<Button name="ФормаЗавершитьРаботуПользователей" id="85">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ЗавершитьРаботуПользователей</CommandName>
+					<ExtendedTooltip name="ФормаЗавершитьРаботуПользователейРасширеннаяПодсказка" id="86"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="UsersList" id="2">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Width>87</Width>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>UsersList</DataPath>
+			<RowPictureDataPath>UsersList.Picture</RowPictureDataPath>
+			<BorderColor>style:BorderColor</BorderColor>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="UsersListКонтекстноеМеню" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="UserActivity1" id="20">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.UserActivity</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BackColor>style:ButtonBackColor</BackColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="UserActivity1ExtendedTooltip" id="53"/>
+					</Button>
+					<Button name="EventsJournal1" id="37">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.EventsJournal</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BackColor>style:ButtonBackColor</BackColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="EventsJournal1ExtendedTooltip" id="54"/>
+					</Button>
+					<Button name="DoRefresh1" id="21">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.DoRefresh</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BackColor>style:ButtonBackColor</BackColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="DoRefresh1ExtendedTooltip" id="55"/>
+					</Button>
+					<Button name="Find1" id="33">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Item.UsersList.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="Find1ExtendedTooltip" id="56"/>
+					</Button>
+					<Button name="CancelFind1" id="35">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Item.UsersList.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="CancelFind1ExtendedTooltip" id="57"/>
+					</Button>
+					<Button name="SortAsc" id="24">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.SortAsc</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BackColor>style:ButtonBackColor</BackColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="SortAscExtendedTooltip" id="58"/>
+					</Button>
+					<Button name="SortDesc" id="25">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.SortDesc</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BackColor>style:ButtonBackColor</BackColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="SortDescExtendedTooltip" id="59"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="UsersListКоманднаяПанель" id="23"/>
+			<ExtendedTooltip name="UsersListExtendedTooltip" id="60"/>
+			<SearchStringAddition name="UsersListСтрокаПоиска" id="69">
+				<AdditionSource>
+					<Item>UsersList</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="UsersListСтрокаПоискаКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="UsersListСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="UsersListСостояниеПросмотра" id="72">
+				<AdditionSource>
+					<Item>UsersList</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="UsersListСостояниеПросмотраКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="UsersListСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="UsersListУправлениеПоиском" id="75">
+				<AdditionSource>
+					<Item>UsersList</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="UsersListУправлениеПоискомКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="UsersListУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">UsersListSelection</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="User" id="4">
+					<DataPath>UsersList.UserName</DataPath>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<CellHyperlink>true</CellHyperlink>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Width>30</Width>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="UserКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="UserExtendedTooltip" id="61"/>
+				</LabelField>
+				<InputField name="Application" id="8">
+					<DataPath>UsersList.Application</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Width>15</Width>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="ApplicationКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ApplicationExtendedTooltip" id="62"/>
+				</InputField>
+				<InputField name="SessionStart" id="10">
+					<DataPath>UsersList.SessionStart</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="SessionStartКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="SessionStartExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="Computer" id="12">
+					<DataPath>UsersList.Computer</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Width>30</Width>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="ComputerКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ComputerExtendedTooltip" id="64"/>
+				</InputField>
+				<InputField name="Session" id="14">
+					<DataPath>UsersList.Session</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="SessionКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="SessionExtendedTooltip" id="65"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ActiveUsersCount" id="40">
+			<DataPath>ActiveUsersCount</DataPath>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<ContextMenu name="ActiveUsersCountКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ActiveUsersCountExtendedTooltip" id="66"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.StandardActiveUsers</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="UsersList" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список пользователей</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.UserList</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="User" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.User</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Application" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приложение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.Application</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="SessionStart" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало работы</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.StartTime</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Computer" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компьютер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.Computer</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Session" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сеанс</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.Seance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>7</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="UserName" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.User</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Current" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий сеанс</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>Processing.CurrentSeance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Picture" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Picture</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>SYS</v8:lang>
+							<v8:content>MainForm.Picture</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ActiveUsersCount" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Count</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SortColumnName" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя колонки сортировки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.SortColumnName</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SortDirection" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление сортировки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.SortDirection</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>5</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="стрМонопольныйРежим" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стр монопольный режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>UsersList</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">UsersList.Current</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">Highlight current session</dcsset:presentation>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="EventsJournal" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал регистрации</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.EventLogJournal</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть журнал регистрации событий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.OpenEventLogJournal</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EventLog</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>OpenEventsJournal</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="UserActivity" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.UserActivity</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.UserActivity</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EventLogByUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>OpenEventsJournalByUser</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DoRefresh" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Refresh</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DoRefresh</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SortAsc" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка по возрастанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Asc</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка по возрастанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Asc</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SortListAsc</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SortAsc</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="SortDesc" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка по убыванию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Desc</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка по убыванию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>SYS</v8:lang>
+					<v8:content>Processing.Desc</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SortListDesc</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Sortdesc</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВключитьМонопольныйРежим" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить монопольный режим</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить монопольный режим</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceBoxesFilled</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВключитьМонопольныйРежим</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыключитьМонопольныйРежим" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выключить монопольный режим</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить монопольный режим</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceBoxesThreeFilled</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыключитьМонопольныйРежим</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьРаботуПользователей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРаботуПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
