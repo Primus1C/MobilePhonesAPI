@@ -1,0 +1,20 @@
+Скопировать в C:\Users\Артур\Documents\ConfigFinCore и вставить в Configuration.xml / ConfigDumpInfo.xml.
+
+1. Реквизит GUID (строка 36, индекс) — во все справочники, по образцу документов:
+   Валюты, ВидыНоменклатуры, ВидыЦен, Города, ДенежныеСчета, Контрагенты,
+   Номенклатура, Партии, Пользователи, Склады, Сотрудники, Страны.
+   Фрагмент: Catalogs/GUID.Attribute.xml (для каждого справочника свой uuid).
+
+2. Общий модуль FinCoreОбменHTTP — из CommonModules/.
+
+3. HTTP-сервис Exchange, RootURL Exchange, POST /AllInOne — из HTTPServices/.
+
+4. В Configuration.xml:
+   <CommonModule>FinCoreОбменHTTP</CommonModule>
+   <HTTPService>Exchange</HTTPService>
+
+5. Публикация HTTP-сервиса: пользователь и пароль те же, что в ПараметрыОбмена() источника.
+   Регламент на источнике Use=false, пока не заполнен АдресСервиса.
+
+6. На источнике создать узел плана ОбменFinCore с наименованием FinCore
+   и заполнить АдресСервиса / Пользователь / Пароль в FinCoreОбменHTTP.ПараметрыОбмена().

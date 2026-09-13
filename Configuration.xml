@@ -520,6 +520,7 @@
 			<CommonModule>РаботаСВалютой</CommonModule>
 			<CommonModule>РаботаСИнвойсами</CommonModule>
 			<CommonModule>Комиссия</CommonModule>
+			<CommonModule>FinCoreОбменHTTP</CommonModule>
 			<CommonModule>StockAPI_Заказы</CommonModule>
 			<CommonModule>StockAPI_Контрагенты</CommonModule>
 			<CommonModule>StockAPI_Остатки</CommonModule>
@@ -534,6 +535,7 @@
 			<CommonAttribute>Примечание</CommonAttribute>
 			<CommonAttribute>Окончательно</CommonAttribute>
 			<CommonAttribute>ЕстьЗатраты</CommonAttribute>
+			<ExchangePlan>ОбменFinCore</ExchangePlan>
 			<HTTPService>StockAPI</HTTPService>
 			<EventSubscription>Сооб_ОбработкаПолученияФормы</EventSubscription>
 			<EventSubscription>Сооб_ЗаписьКонстант</EventSubscription>
@@ -542,6 +544,7 @@
 			<ScheduledJob>РасчетИдентификатора</ScheduledJob>
 			<ScheduledJob>Сооб_УдалениеПомеченныхСообщений</ScheduledJob>
 			<ScheduledJob>ОбменТелеграм</ScheduledJob>
+			<ScheduledJob>ОбменFinCore</ScheduledJob>
 			<ScheduledJob>ОтслеживаниеТреков</ScheduledJob>
 			<ScheduledJob>ПроведениеДокументов</ScheduledJob>
 			<ScheduledJob>WebHooksStockAPI</ScheduledJob>
@@ -826,6 +829,7 @@
 			<InformationRegister>ПротоколОбменов</InformationRegister>
 			<InformationRegister>СостоянияИнвойсовПродажи</InformationRegister>
 			<InformationRegister>ОчередьWebHook</InformationRegister>
+			<InformationRegister>ОшибкиОбменаFinCore</InformationRegister>
 			<AccumulationRegister>ОстаткиТовара</AccumulationRegister>
 			<AccumulationRegister>НезакрытыеДокументы</AccumulationRegister>
 			<AccumulationRegister>Долги</AccumulationRegister>

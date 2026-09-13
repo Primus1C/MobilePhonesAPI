@@ -733,6 +733,8 @@
 		<Metadata name="CommonForm.ФормаСтруктурыПодчиненности" id="3aaccc29-d496-4012-ae0d-aa1ca194dbef" configVersion="3a8c3ad1ea0fd34ea15b18f5219c4ade00000000"/>
 		<Metadata name="CommonForm.ФормаСтруктурыПодчиненности.Form" id="3aaccc29-d496-4012-ae0d-aa1ca194dbef.0" configVersion="aaa33f3a85867842865c33159e20ef1800000000"/>
 		<Metadata name="CommonForm.ФормаСтруктурыПодчиненности.Help" id="3aaccc29-d496-4012-ae0d-aa1ca194dbef.1" configVersion="b1baaf9a99208e4694759c8c166b187c00000000"/>
+		<Metadata name="CommonModule.FinCoreОбменHTTP" id="9f92554b-5f34-4911-a5e1-6ca0b2debaea" configVersion="a1b2c3d4e5f678901234567890abcdef00000000"/>
+		<Metadata name="CommonModule.FinCoreОбменHTTP.Module" id="9f92554b-5f34-4911-a5e1-6ca0b2debaea.0" configVersion="b2c3d4e5f678901234567890abcdef0100000000"/>
 		<Metadata name="CommonModule.StockAPI_Заказы" id="aa000006-0006-0006-0006-000000000006" configVersion="1323751e2e168641bf69fcf6504055ed00000000"/>
 		<Metadata name="CommonModule.StockAPI_Заказы.Module" id="aa000006-0006-0006-0006-000000000006.0" configVersion="13a8ff9ee9b7d449b0ea1711c2d57b9a00000000"/>
 		<Metadata name="CommonModule.StockAPI_Контрагенты" id="aa000004-0004-0004-0004-000000000004" configVersion="5bb94d703486cb41980313b2bd2afbc400000000"/>
@@ -1007,7 +1009,7 @@
 		<Metadata name="CommonTemplate.ОформлениеОтчетовЧерноБелый.Template" id="90257904-0a61-490a-b34e-56583f282c99.0" configVersion="8738c85cd544fc44a34dfcbfa08c117300000000"/>
 		<Metadata name="CommonTemplate.ЧтоНового" id="dd190b7e-5cf9-48ed-b9fd-e5dd06eee8c7" configVersion="84835f718e964f418c8cd66531abdeb600000000"/>
 		<Metadata name="CommonTemplate.ЧтоНового.Template" id="dd190b7e-5cf9-48ed-b9fd-e5dd06eee8c7.0" configVersion="227885890f6b74498056ab9392338f8100000000"/>
-		<Metadata name="Configuration.Торговля_серийными_товарами_8_3" id="0e96bf56-f658-47bc-a738-6c33ab9bcc41" configVersion="d4b2a0a92d381d42a82c45e3bb91577100000000"/>
+		<Metadata name="Configuration.Торговля_серийными_товарами_8_3" id="0e96bf56-f658-47bc-a738-6c33ab9bcc41" configVersion="e5c3b1a02d381d42a82c45e3bb91577200000000"/>
 		<Metadata name="Configuration.Торговля_серийными_товарами_8_3.ClientApplicationInterface" id="90e3974d-e3d1-4201-8437-980bc2d5c502.b" configVersion="b077136cd0c10f40ac2cfa1735bcfed700000000"/>
 		<Metadata name="Configuration.Торговля_серийными_товарами_8_3.CommandInterface" id="90e3974d-e3d1-4201-8437-980bc2d5c502.a" configVersion="78bab49fa604c54fb24c62625d455d3a00000000"/>
 		<Metadata name="Configuration.Торговля_серийными_товарами_8_3.HomePageWorkArea" id="90e3974d-e3d1-4201-8437-980bc2d5c502.8" configVersion="8f6898fc956d214880eb8da75bc257d500000000"/>
@@ -2398,6 +2400,12 @@
 		<Metadata name="EventSubscription.ПроведениеДокументов" id="feb30327-2cbb-4fee-9c24-1bd7191e9f86" configVersion="2df9761625accc49a3b8c6f495523c9b00000000"/>
 		<Metadata name="EventSubscription.Сооб_ЗаписьКонстант" id="3c3e2f51-5810-48af-bc58-2f880bf9ecb5" configVersion="2b97a78f00b4f04bb5d4e3d46e48bdb900000000"/>
 		<Metadata name="EventSubscription.Сооб_ОбработкаПолученияФормы" id="ff8d55c1-3ead-4269-9feb-a0a3f98dff38" configVersion="f48cd0cb2d76ef46a88097b9283ac52600000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore" id="f9e86bb7-3233-44a1-a1ec-9eae4f3cd34d" configVersion="c3d4e5f678901234567890abcdef012300000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore.Content" id="f9e86bb7-3233-44a1-a1ec-9eae4f3cd34d.1" configVersion="d4e5f678901234567890abcdef01234500000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore.Form.ФормаСписка" id="ec4420cf-63b2-48ba-98a0-1f32f8c4c36d" configVersion="e5f678901234567890abcdef0123456700000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore.Form.ФормаСписка.Form" id="ec4420cf-63b2-48ba-98a0-1f32f8c4c36d.0" configVersion="f678901234567890abcdef012345678900000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore.Form.ФормаУзла" id="9537e0d9-4cf2-450c-b7b2-a211b9a14970" configVersion="1678901234567890abcdef012345678a00000000"/>
+		<Metadata name="ExchangePlan.ОбменFinCore.Form.ФормаУзла.Form" id="9537e0d9-4cf2-450c-b7b2-a211b9a14970.0" configVersion="278901234567890abcdef012345678ab00000000"/>
 		<Metadata name="FilterCriterion.СвязанныеДокументы" id="49b75903-eda0-41c3-a0df-0d9228ddc368" configVersion="916e8ada70ac5443b32bbb31c4e0436300000000"/>
 		<Metadata name="FunctionalOption.ИспользоватьСообщения" id="5d6246df-6d3c-4318-8421-c3372a64d370" configVersion="b05c61607d1eb142bbf89163f95009c300000000"/>
 		<Metadata name="FunctionalOption.ОстаткиТоваров" id="aaecaef6-dc94-4cc5-9240-5a74959fec94" configVersion="cf76302a62bb20449ae95d9bafb6df8300000000"/>
@@ -2535,6 +2543,12 @@
 		<Metadata name="InformationRegister.ОчередьWebHook.Form.ФормаЗаписи.Form" id="7ff55080-283c-4a41-93e0-dd7f53a49bf3.0" configVersion="03b0c5f7b8c82d40b84e1c7348f3ac6e00000000"/>
 		<Metadata name="InformationRegister.ОчередьWebHook.Form.ФормаСписка" id="dd84509d-44b7-429e-b5c4-e1dd17d4166f" configVersion="2e6626c64472214f996007e5657e0c7200000000"/>
 		<Metadata name="InformationRegister.ОчередьWebHook.Form.ФормаСписка.Form" id="dd84509d-44b7-429e-b5c4-e1dd17d4166f.0" configVersion="6c7b25db306d35418ae4bc543e283a7400000000"/>
+		<Metadata name="InformationRegister.ОшибкиОбменаFinCore" id="57341884-6f17-474e-81e6-a6ad599a3a5d" configVersion="38901234567890abcdef012345678abc00000000">
+			<Metadata name="InformationRegister.ОшибкиОбменаFinCore.Dimension.Объект" id="1488d0f6-7836-46b4-bc52-0773e6031e1c"/>
+			<Metadata name="InformationRegister.ОшибкиОбменаFinCore.Resource.ТекстОшибки" id="23bc5a00-27ed-47c8-bd2f-08a2ccfdbc80"/>
+			<Metadata name="InformationRegister.ОшибкиОбменаFinCore.Dimension.GUID" id="2a86ceb1-6c58-4277-a85c-20419c73765f"/>
+			<Metadata name="InformationRegister.ОшибкиОбменаFinCore.Dimension.Дата" id="c3f09d87-e469-4c97-bc1f-f99603a2bd53"/>
+		</Metadata>
 		<Metadata name="InformationRegister.ПротоколОбменов" id="204c4c44-a8d8-4711-95e1-f6663bd9b60a" configVersion="9000e0400b1f5a438d16fa88052e988400000000">
 			<Metadata name="InformationRegister.ПротоколОбменов.Attribute.КодСостояния" id="051ffdbf-b58b-4ac0-872f-4469f972bc86"/>
 			<Metadata name="InformationRegister.ПротоколОбменов.Attribute.ШаблонURL" id="0983109c-3bb8-44f0-91b4-c7a8f2f476f8"/>
@@ -3377,6 +3391,8 @@
 		<Metadata name="ScheduledJob.WebHooksStockAPI.Schedule" id="b92fd88e-48c4-4416-9542-5c0d0b65d72d.0" configVersion="314f9664dbde6047b5d5e46421ad692200000000"/>
 		<Metadata name="ScheduledJob.ОбменТелеграм" id="26ea777e-f7a4-43c0-a31b-45d1053c718c" configVersion="c411414b835f2549953e0da7b3e2773f00000000"/>
 		<Metadata name="ScheduledJob.ОбменТелеграм.Schedule" id="26ea777e-f7a4-43c0-a31b-45d1053c718c.0" configVersion="a8e16a66f94515449dfab34bf77da35400000000"/>
+		<Metadata name="ScheduledJob.ОбменFinCore" id="845fa450-dd73-4db5-aa9b-d8e7b0c2e3de" configVersion="4901234567890abcdef012345678abcd00000000"/>
+		<Metadata name="ScheduledJob.ОбменFinCore.Schedule" id="845fa450-dd73-4db5-aa9b-d8e7b0c2e3de.0" configVersion="5a1234567890abcdef012345678abcde00000000"/>
 		<Metadata name="ScheduledJob.ОтслеживаниеТреков" id="6db2c933-6a5c-49fc-9d50-746f10330620" configVersion="09aeeae74a9e9040b2993b675f4e90d000000000"/>
 		<Metadata name="ScheduledJob.ОтслеживаниеТреков.Schedule" id="6db2c933-6a5c-49fc-9d50-746f10330620.0" configVersion="360f26f1480a6d4189058c15712a209e00000000"/>
 		<Metadata name="ScheduledJob.ПроведениеДокументов" id="10167a0f-bacd-4e14-8042-ecbaabe69483" configVersion="b0f867bbd8ee614683b2e3d9eaecd33900000000"/>
@@ -3451,7 +3467,7 @@
 		<Metadata name="Subsystem.Деньги.CommandInterface" id="38e56517-56dd-43a7-bcdf-d0004f202b42.1" configVersion="77621effe08e8a4da83624478936d7ea00000000"/>
 		<Metadata name="Subsystem.Закупки" id="605d0126-ebc3-4bc4-a2dc-543ad0d360cf" configVersion="cfe1cdb8148a5040b043e01563b26f2400000000"/>
 		<Metadata name="Subsystem.Закупки.CommandInterface" id="605d0126-ebc3-4bc4-a2dc-543ad0d360cf.1" configVersion="5055c0cee5acf948b891d726e32a1e4200000000"/>
-		<Metadata name="Subsystem.Интеграция" id="0b4db138-d3c1-406e-9f0e-d85322cfa4f2" configVersion="e2a4ba199e4d3147bceae5fe009166a600000000"/>
+		<Metadata name="Subsystem.Интеграция" id="0b4db138-d3c1-406e-9f0e-d85322cfa4f2" configVersion="f3b5cb2a9e4d3147bceae5fe009166a700000000"/>
 		<Metadata name="Subsystem.Интеграция.CommandInterface" id="0b4db138-d3c1-406e-9f0e-d85322cfa4f2.1" configVersion="1eb60f897f06db41b519406cbf5d7c0f00000000"/>
 		<Metadata name="Subsystem.Комиссия" id="70baa148-d803-4719-8550-9a80d456567a" configVersion="4852efdab7ed48498735e44368bc380100000000"/>
 		<Metadata name="Subsystem.Продажи" id="ab81c6a1-6d5e-4efd-aedb-1e9a15d0b939" configVersion="5f46c1eca8b4d5438a80839af2e8fca000000000"/>
